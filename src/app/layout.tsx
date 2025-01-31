@@ -1,5 +1,3 @@
-'use client';
-
 import './globals.css';
 import { Playfair_Display, Lora } from 'next/font/google';
 import Metadata from '@/components/Metadata';
@@ -18,12 +16,6 @@ const lora = Lora({
   variable: '--font-lora',
   display: 'swap',
 });
-
-export const metadata = {
-  title: 'Versal - Ресторан высокой кухни',
-  description: 'Изысканная кухня, уникальная атмосфера и безупречный сервис в самом сердце города.',
-  keywords: 'ресторан, высокая кухня, бронирование столиков, меню, винная карта, шеф-повар',
-};
 
 export default function RootLayout({
   children,

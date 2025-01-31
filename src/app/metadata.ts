@@ -1,62 +1,31 @@
-import { Metadata } from 'next'
-
-const title = 'Luxury Restaurant - Изысканная кухня в атмосфере роскоши'
-const description = 'Погрузитесь в мир высокой кухни в нашем премиальном ресторане. Авторские блюда, уникальные вкусовые сочетания и безупречный сервис.'
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: {
-    default: title,
-    template: '%s | Luxury Restaurant',
-  },
-  description,
-  keywords: [
-    'ресторан премиум класса',
-    'высокая кухня',
-    'авторская кухня',
-    'fine dining',
-    'luxury restaurant',
-    'бронирование столика',
-    'ресторан москва',
-  ],
-  authors: [{ name: 'Luxury Restaurant' }],
-  creator: 'Luxury Restaurant',
-  publisher: 'Luxury Restaurant',
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
+  title: 'Versal - Ресторан высокой кухни',
+  description: 'Изысканная кухня, уникальная атмосфера и безупречный сервис в самом сердце города.',
+  keywords: 'ресторан, высокая кухня, бронирование столиков, меню, винная карта, шеф-повар',
+  manifest: '/manifest.json',
+  icons: {
+    icon: [
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
   },
   openGraph: {
     type: 'website',
-    locale: 'ru_RU',
-    url: process.env.NEXT_PUBLIC_SITE_URL,
-    title,
-    description,
-    siteName: 'Luxury Restaurant',
-    images: [
-      {
-        url: `${process.env.NEXT_PUBLIC_SITE_URL}/images/og-image.jpg`,
-        width: 1200,
-        height: 630,
-        alt: 'Luxury Restaurant',
-      },
-    ],
+    title: 'Versal - Ресторан высокой кухни',
+    description: 'Изысканная кухня, уникальная атмосфера и безупречный сервис в самом сердце города.',
+    images: ['/images/social/og-image.jpg'],
   },
   twitter: {
     card: 'summary_large_image',
-    title,
-    description,
-    images: [`${process.env.NEXT_PUBLIC_SITE_URL}/images/twitter-image.jpg`],
-    creator: '@luxuryrestaurant',
+    title: 'Versal - Ресторан высокой кухни',
+    description: 'Изысканная кухня, уникальная атмосфера и безупречный сервис в самом сердце города.',
+    images: ['/images/social/twitter-card.jpg'],
   },
-  other: {
-    'google-site-verification': 'your-verification-code',
-    'yandex-verification': 'your-verification-code',
-  },
-} 
+  viewport: 'width=device-width, initial-scale=1, maximum-scale=5',
+  themeColor: '#1A1A1A',
+}; 
