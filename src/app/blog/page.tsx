@@ -55,7 +55,7 @@ export default function BlogPage() {
         </p>
 
         {/* AI-помощник */}
-        <div className="bg-white/5 p-6 rounded-lg mb-16">
+        <div className="bg-white/5 p-4 md:p-6 rounded-lg mb-16">
           <div className="flex items-center gap-3 mb-4">
             <div className="w-10 h-10 rounded-full bg-accent flex items-center justify-center">
               <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -63,24 +63,24 @@ export default function BlogPage() {
               </svg>
             </div>
             <div>
-              <h2 className="text-2xl font-playfair text-accent">
+              <h2 className="text-xl md:text-2xl font-playfair text-accent">
                 VersalAI
               </h2>
-              <p className="text-gray-300">{greeting}</p>
+              <p className="text-sm md:text-base text-gray-300">{greeting}</p>
             </div>
           </div>
-          <div className="flex gap-4">
+          <div className="flex flex-col md:flex-row gap-2 md:gap-4">
             <input
               type="text"
               value={aiQuery}
               onChange={(e) => setAiQuery(e.target.value)}
               placeholder="Задайте вопрос о рецептах, винах или получите персональные рекомендации..."
-              className="flex-1 bg-white/10 text-white px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent"
+              className="flex-1 bg-white/10 text-white px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent text-sm md:text-base"
             />
             <button
               onClick={handleAiQuery}
               disabled={isLoading || !aiQuery}
-              className="btn-primary"
+              className="btn-primary whitespace-nowrap text-sm md:text-base"
             >
               {isLoading ? "Анализирую..." : "Спросить"}
             </button>

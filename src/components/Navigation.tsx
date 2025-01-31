@@ -74,7 +74,7 @@ export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
   const isMobile = useMediaQuery('(max-width: 768px)');
-  const isTransparentPage = ['/', '/reservation', '/menu', '/gallery'].includes(pathname);
+  const isTransparentPage = ['/', '/reservation', '/menu', '/gallery', '/blog'].includes(pathname);
   const lastScrollY = useRef(0);
   const ticking = useRef(false);
 
