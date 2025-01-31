@@ -3,6 +3,7 @@ import { Playfair_Display, Lora } from 'next/font/google';
 import Metadata from '@/components/Metadata';
 import A11y from '@/components/A11y';
 import Navigation from '@/components/Navigation';
+import ScrollToTop from '@/components/ScrollToTop';
 import { PerformanceProvider } from '@/contexts/PerformanceContext';
 
 const playfair = Playfair_Display({
@@ -30,6 +31,7 @@ export default function RootLayout({
         <PerformanceProvider>
           <Navigation />
           <main>{children}</main>
+          <ScrollToTop />
         </PerformanceProvider>
       </body>
     </html>
