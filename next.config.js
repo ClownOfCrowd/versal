@@ -4,29 +4,18 @@ const nextConfig = {
   swcMinify: true,
   images: {
     unoptimized: true,
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: '**',
-      },
-    ],
   },
   output: 'export',
-  distDir: 'out',
-  trailingSlash: true,
+  assetPrefix: '/',
+  basePath: '',
+  distDir: '.next',
   webpack: (config) => {
     config.module.rules.push({
-      test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
-      use: [
-        {
-          loader: 'file-loader',
-          options: {
-            publicPath: '/_next/static/media',
-            outputPath: 'static/media',
-            name: '[name].[hash].[ext]',
-          },
-        },
-      ],
+      test: /\.(mp4|webm|ogg|mp3|wav|flac|aac|jpg|jpeg|png|gif|svg)(\?.*)?$/,
+      type: 'asset/resource',
+      generator: {
+        filename: 'static/media/[name][ext]'
+      }
     });
     return config;
   },
