@@ -4,11 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && npm run copy-static",
+    "build": "npm run generate-assets && next build && npm run copy-static",
     "start": "next start",
     "lint": "next lint",
     "optimize": "node scripts/optimize-media.js",
-    "copy-static": "node scripts/copy-static.js"
+    "copy-static": "node scripts/copy-static.js",
+    "generate-assets": "node scripts/generate-favicons.js"
   },
   "dependencies": {
     "@react-three/drei": "^9.121.4",

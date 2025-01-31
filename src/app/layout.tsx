@@ -1,5 +1,9 @@
+'use client';
+
 import './globals.css';
 import { Playfair_Display, Lora } from 'next/font/google';
+import Metadata from '@/components/Metadata';
+import A11y from '@/components/A11y';
 import Navigation from '@/components/Navigation';
 import { PerformanceProvider } from '@/contexts/PerformanceContext';
 
@@ -28,7 +32,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ru" className={`${playfair.variable} ${lora.variable}`}>
-      <body className="bg-dark text-white">
+      <Metadata />
+      <body className="bg-dark text-white min-h-screen">
+        <A11y />
         <PerformanceProvider>
           <Navigation />
           <main>{children}</main>
