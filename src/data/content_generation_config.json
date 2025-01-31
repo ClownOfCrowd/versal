@@ -1,0 +1,282 @@
+{
+  "content_generation": {
+    "scheduling": {
+      "regular_content": {
+        "recipes": {
+          "frequency": "2_per_week",
+          "preferred_days": ["Вторник", "Пятница"],
+          "publication_time": "10:00",
+          "seasonal_adjustments": {
+            "spring": {
+              "themes": ["Свежие травы", "Молодые овощи", "Легкие десерты"],
+              "ingredients_focus": ["Спаржа", "Горошек", "Редис"]
+            },
+            "summer": {
+              "themes": ["Прованские травы", "Свежие фрукты", "Холодные супы"],
+              "ingredients_focus": ["Томаты", "Базилик", "Ягоды"]
+            },
+            "autumn": {
+              "themes": ["Грибы", "Тыква", "Утка"],
+              "ingredients_focus": ["Белые грибы", "Тыква", "Инжир"]
+            },
+            "winter": {
+              "themes": ["Горячие супы", "Запеченное мясо", "Пряные десерты"],
+              "ingredients_focus": ["Корнеплоды", "Дичь", "Цитрусовые"]
+            }
+          }
+        },
+        "wine_articles": {
+          "frequency": "1_per_week",
+          "preferred_day": "Четверг",
+          "publication_time": "16:00",
+          "themes_rotation": {
+            "week1": "Регионы Франции",
+            "week2": "Сорта винограда",
+            "week3": "Техники виноделия",
+            "week4": "Сочетания с блюдами"
+          }
+        },
+        "news": {
+          "frequency": "as_needed",
+          "optimal_timing": {
+            "events": "4_weeks_before",
+            "menu_updates": "1_week_before",
+            "special_offers": "2_weeks_before"
+          }
+        }
+      },
+      "special_content": {
+        "holidays": {
+          "new_year": {
+            "start_planning": "november_1",
+            "content_types": ["Праздничное меню", "Подборка шампанских", "Рецепты для дома"]
+          },
+          "valentine_day": {
+            "start_planning": "january_15",
+            "content_types": ["Романтический ужин", "Винная карта для двоих"]
+          },
+          "easter": {
+            "start_planning": "30_days_before",
+            "content_types": ["Пасхальные рецепты", "Праздничный бранч"]
+          }
+        },
+        "events": {
+          "wine_tastings": {
+            "frequency": "monthly",
+            "content_preparation": "2_weeks_before"
+          },
+          "chef_masterclasses": {
+            "frequency": "bi_monthly",
+            "content_preparation": "3_weeks_before"
+          }
+        }
+      }
+    },
+    "content_optimization": {
+      "ai_parameters": {
+        "tone_of_voice": {
+          "recipes": {
+            "style": "профессиональный, но доступный",
+            "personality": "дружелюбный эксперт",
+            "technical_level": "средний с пояснениями"
+          },
+          "wine_articles": {
+            "style": "образовательный, элегантный",
+            "personality": "знающий сомелье",
+            "technical_level": "продвинутый с базовыми пояснениями"
+          },
+          "news": {
+            "style": "информативный, энтузиастичный",
+            "personality": "гостеприимный хозяин",
+            "technical_level": "общедоступный"
+          }
+        },
+        "personalization": {
+          "user_segments": [
+            {
+              "name": "начинающие кулинары",
+              "content_adjustments": {
+                "recipe_complexity": "базовый",
+                "technique_explanations": "подробные",
+                "ingredient_substitutions": "доступные"
+              }
+            },
+            {
+              "name": "продвинутые кулинары",
+              "content_adjustments": {
+                "recipe_complexity": "продвинутый",
+                "technique_explanations": "профессиональные",
+                "ingredient_substitutions": "изысканные"
+              }
+            },
+            {
+              "name": "винные энтузиасты",
+              "content_adjustments": {
+                "wine_details": "подробные",
+                "tasting_notes": "профессиональные",
+                "pairing_suggestions": "специализированные"
+              }
+            }
+          ]
+        }
+      },
+      "seo_optimization": {
+        "keyword_research": {
+          "tools": ["Google Trends", "Yandex.Wordstat"],
+          "update_frequency": "weekly",
+          "focus_areas": [
+            "французская кухня",
+            "вина франции",
+            "рестораны москвы",
+            "гастрономия"
+          ]
+        },
+        "content_structure": {
+          "recipes": {
+            "required_sections": [
+              "история блюда",
+              "ингредиенты",
+              "пошаговые инструкции",
+              "советы шефа",
+              "винные пары"
+            ],
+            "optional_sections": [
+              "варианты подачи",
+              "сезонные замены",
+              "истории гостей"
+            ]
+          },
+          "wine_articles": {
+            "required_sections": [
+              "история региона/вина",
+              "характеристики",
+              "рекомендации по дегустации",
+              "сочетания с блюдами"
+            ],
+            "optional_sections": [
+              "интервью с виноделом",
+              "истории коллекционеров",
+              "инвестиционный потенциал"
+            ]
+          }
+        }
+      }
+    },
+    "quality_control": {
+      "review_process": {
+        "recipes": {
+          "reviewers": [
+            {
+              "role": "шеф-повар",
+              "checks": ["техника", "пропорции", "температуры"]
+            },
+            {
+              "role": "фуд-фотограф",
+              "checks": ["визуальное оформление", "стилистика фото"]
+            },
+            {
+              "role": "сомелье",
+              "checks": ["винные пары", "описания вкусов"]
+            }
+          ],
+          "testing": {
+            "required": true,
+            "test_kitchen": true,
+            "documentation": ["фото процесса", "видео ключевых этапов"]
+          }
+        },
+        "wine_articles": {
+          "reviewers": [
+            {
+              "role": "шеф-сомелье",
+              "checks": ["точность информации", "актуальность данных"]
+            },
+            {
+              "role": "винный эксперт",
+              "checks": ["технические детали", "исторические факты"]
+            }
+          ],
+          "fact_checking": {
+            "required": true,
+            "sources_verification": true,
+            "expert_consultation": true
+          }
+        }
+      },
+      "performance_metrics": {
+        "engagement": {
+          "minimum_requirements": {
+            "views": 1000,
+            "time_on_page": "3_minutes",
+            "completion_rate": "70%"
+          },
+          "success_metrics": {
+            "shares": 50,
+            "comments": 10,
+            "saves": 30
+          }
+        },
+        "conversion": {
+          "recipes": {
+            "minimum_attempts": 10,
+            "success_rate": "80%",
+            "photo_shares": 5
+          },
+          "wine_articles": {
+            "wine_orders": 5,
+            "tasting_registrations": 3,
+            "expert_consultations": 2
+          }
+        }
+      }
+    },
+    "content_distribution": {
+      "channels": {
+        "website": {
+          "primary_placement": "blog",
+          "secondary_placements": ["homepage", "related_articles"]
+        },
+        "email": {
+          "newsletters": {
+            "weekly_digest": {
+              "day": "Понедельник",
+              "time": "10:00",
+              "content_mix": {
+                "recipes": 2,
+                "wine_articles": 1,
+                "news": "as_available"
+              }
+            },
+            "special_editions": {
+              "triggers": ["новое меню", "особые события", "сезонные темы"]
+            }
+          }
+        },
+        "social_media": {
+          "instagram": {
+            "post_types": ["фото блюд", "процесс приготовления", "винные истории"],
+            "stories": ["закулисье", "дегустации", "мастер-классы"],
+            "optimal_timing": {
+              "posts": "12:00, 18:00",
+              "stories": "10:00, 16:00, 20:00"
+            }
+          },
+          "telegram": {
+            "content_types": ["анонсы", "рецепты", "винные обзоры"],
+            "posting_frequency": "daily",
+            "interactive_elements": ["опросы", "викторины", "обсуждения"]
+          }
+        }
+      }
+    }
+  },
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2024-01-30",
+    "responsible": {
+      "content_director": "Анна Иванова",
+      "ai_engineer": "Михаил Сидоров",
+      "contact": "content@versal-restaurant.ru"
+    }
+  }
+} 

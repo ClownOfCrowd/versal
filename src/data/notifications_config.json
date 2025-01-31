@@ -1,0 +1,209 @@
+{
+  "notifications_system": {
+    "types": {
+      "user_notifications": {
+        "comments": {
+          "templates": {
+            "reply_received": {
+              "title": "Новый ответ на ваш комментарий",
+              "body": "{{author}} ответил на ваш комментарий к {{content_title}}",
+              "action_url": "/posts/{{post_id}}#comment-{{comment_id}}"
+            },
+            "expert_response": {
+              "title": "Эксперт ответил на ваш вопрос",
+              "body": "{{expert_name}} ответил на ваш вопрос о {{topic}}",
+              "action_url": "/posts/{{post_id}}#expert-response-{{response_id}}"
+            },
+            "comment_liked": {
+              "title": "Ваш комментарий оценили",
+              "body": "{{user_name}} и ещё {{count}} человек оценили ваш комментарий",
+              "action_url": "/posts/{{post_id}}#comment-{{comment_id}}"
+            }
+          },
+          "delivery": {
+            "channels": ["email", "push", "in_app"],
+            "frequency": "real_time"
+          }
+        },
+        "recipe_interactions": {
+          "templates": {
+            "recipe_approved": {
+              "title": "Ваша модификация рецепта одобрена",
+              "body": "Шеф-повар одобрил вашу версию рецепта {{recipe_title}}",
+              "action_url": "/recipes/{{recipe_id}}/modifications"
+            },
+            "cooking_reminder": {
+              "title": "Время готовить!",
+              "body": "Вы планировали приготовить {{recipe_title}} сегодня",
+              "action_url": "/recipes/{{recipe_id}}"
+            }
+          },
+          "delivery": {
+            "channels": ["email", "push"],
+            "frequency": "scheduled"
+          }
+        },
+        "events": {
+          "templates": {
+            "registration_confirmed": {
+              "title": "Бронирование подтверждено",
+              "body": "Ваше участие в {{event_title}} подтверждено",
+              "action_url": "/events/{{event_id}}/my-booking"
+            },
+            "event_reminder": {
+              "title": "Напоминание о мероприятии",
+              "body": "{{event_title}} состоится завтра в {{time}}",
+              "action_url": "/events/{{event_id}}"
+            },
+            "menu_update": {
+              "title": "Обновление меню мероприятия",
+              "body": "В меню {{event_title}} добавлены новые блюда",
+              "action_url": "/events/{{event_id}}/menu"
+            }
+          },
+          "delivery": {
+            "channels": ["email", "sms", "push"],
+            "frequency": {
+              "confirmation": "immediate",
+              "reminder": "24h_before"
+            }
+          }
+        },
+        "achievements": {
+          "templates": {
+            "badge_earned": {
+              "title": "Новое достижение!",
+              "body": "Поздравляем! Вы получили значок {{badge_name}}",
+              "action_url": "/profile/achievements"
+            },
+            "level_up": {
+              "title": "Новый уровень!",
+              "body": "Вы достигли уровня {{level_name}}. Получите свою награду!",
+              "action_url": "/profile/rewards"
+            }
+          },
+          "delivery": {
+            "channels": ["in_app", "push"],
+            "frequency": "real_time"
+          }
+        }
+      },
+      "admin_notifications": {
+        "content_moderation": {
+          "templates": {
+            "new_comment": {
+              "title": "Новый комментарий требует проверки",
+              "body": "Пользователь {{user_name}} оставил комментарий к {{content_title}}",
+              "action_url": "/admin/moderation/comments"
+            },
+            "reported_content": {
+              "title": "Жалоба на контент",
+              "body": "Получена жалоба на {{content_type}} от пользователя {{reporter_name}}",
+              "action_url": "/admin/moderation/reports"
+            }
+          },
+          "delivery": {
+            "channels": ["email", "admin_dashboard"],
+            "frequency": "real_time",
+            "priority": "high"
+          }
+        },
+        "expert_notifications": {
+          "templates": {
+            "question_assigned": {
+              "title": "Новый вопрос для эксперта",
+              "body": "Пользователь задал вопрос по теме {{topic}}",
+              "action_url": "/admin/expert/questions"
+            }
+          },
+          "delivery": {
+            "channels": ["email", "admin_dashboard"],
+            "frequency": "real_time"
+          }
+        }
+      }
+    },
+    "delivery_channels": {
+      "email": {
+        "provider": "SendGrid",
+        "templates": {
+          "base_template": "versal-notification",
+          "logo_url": "/images/email/versal-logo.png",
+          "footer_text": "Ресторан Versal - Искусство французской кухни"
+        },
+        "settings": {
+          "from_email": "notifications@versal-restaurant.ru",
+          "from_name": "Ресторан Versal",
+          "reply_to": "no-reply@versal-restaurant.ru"
+        }
+      },
+      "push": {
+        "provider": "Firebase",
+        "settings": {
+          "icon": "/images/push/versal-icon.png",
+          "click_action": "OPEN_APP",
+          "time_to_live": 86400
+        }
+      },
+      "sms": {
+        "provider": "Twilio",
+        "settings": {
+          "sender_id": "VERSAL",
+          "max_length": 160
+        }
+      },
+      "in_app": {
+        "display_duration": 5000,
+        "max_notifications": 50,
+        "grouping": {
+          "enabled": true,
+          "max_group_size": 5
+        }
+      }
+    },
+    "preferences": {
+      "default_settings": {
+        "email": {
+          "comments": true,
+          "events": true,
+          "marketing": false
+        },
+        "push": {
+          "comments": true,
+          "events": true,
+          "achievements": true
+        },
+        "sms": {
+          "events": true,
+          "critical_updates": true
+        }
+      },
+      "quiet_hours": {
+        "enabled": true,
+        "start": "22:00",
+        "end": "09:00",
+        "timezone": "Europe/Moscow"
+      }
+    },
+    "analytics": {
+      "metrics": {
+        "delivery_success_rate": true,
+        "open_rate": true,
+        "click_through_rate": true,
+        "engagement_time": true
+      },
+      "reporting": {
+        "frequency": "daily",
+        "retention_period": "90_days"
+      }
+    }
+  },
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2024-01-30",
+    "responsible": {
+      "technical_lead": "Игорь Петров",
+      "contact": "notifications@versal-restaurant.ru"
+    }
+  }
+} 

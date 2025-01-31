@@ -1,0 +1,277 @@
+{
+  "ml_system": {
+    "content_optimization": {
+      "title_generation": {
+        "model": {
+          "type": "gpt-4",
+          "parameters": {
+            "temperature": 0.7,
+            "max_tokens": 50,
+            "top_p": 0.9
+          },
+          "training": {
+            "fine_tuning": true,
+            "custom_dataset": "versal_titles_dataset",
+            "evaluation_metrics": ["кликабельность", "релевантность"]
+          }
+        },
+        "constraints": {
+          "length": {
+            "min_chars": 30,
+            "max_chars": 70
+          },
+          "keywords": {
+            "min_count": 1,
+            "max_count": 3
+          }
+        }
+      },
+      "content_generation": {
+        "recipes": {
+          "model": {
+            "type": "gpt-4",
+            "parameters": {
+              "temperature": 0.8,
+              "max_tokens": 1000,
+              "top_p": 0.9
+            }
+          },
+          "structure_requirements": {
+            "sections": [
+              "история",
+              "ингредиенты",
+              "пошаговые инструкции",
+              "советы",
+              "винные пары"
+            ],
+            "formatting": {
+              "ingredients": "list",
+              "instructions": "numbered_list",
+              "tips": "bullet_points"
+            }
+          }
+        },
+        "wine_articles": {
+          "model": {
+            "type": "gpt-4",
+            "parameters": {
+              "temperature": 0.6,
+              "max_tokens": 1500,
+              "top_p": 0.9
+            }
+          },
+          "structure_requirements": {
+            "sections": [
+              "история",
+              "регион",
+              "характеристики",
+              "дегустационные заметки",
+              "гастрономические сочетания"
+            ],
+            "formatting": {
+              "tasting_notes": "structured_list",
+              "pairings": "categorized_list"
+            }
+          }
+        }
+      },
+      "image_generation": {
+        "model": {
+          "type": "dall-e-3",
+          "parameters": {
+            "quality": "hd",
+            "style": "photorealistic",
+            "size": "1024x1024"
+          }
+        },
+        "requirements": {
+          "recipes": {
+            "views": ["готовое блюдо", "процесс приготовления"],
+            "style": "food_photography",
+            "lighting": "natural",
+            "background": "minimal"
+          },
+          "wine": {
+            "views": ["бутылка", "бокал", "виноградник"],
+            "style": "product_photography",
+            "lighting": "studio",
+            "background": "gradient"
+          }
+        }
+      }
+    },
+    "personalization": {
+      "recommendation_engine": {
+        "algorithms": {
+          "collaborative_filtering": {
+            "model": "neural_collaborative_filtering",
+            "parameters": {
+              "embedding_size": 64,
+              "layers": [128, 64, 32],
+              "learning_rate": 0.001
+            },
+            "training": {
+              "batch_size": 256,
+              "epochs": 100,
+              "validation_split": 0.2
+            }
+          },
+          "content_based": {
+            "model": "doc2vec",
+            "parameters": {
+              "vector_size": 100,
+              "min_count": 2,
+              "epochs": 20
+            },
+            "features": [
+              "категории",
+              "ингредиенты",
+              "техники",
+              "сложность",
+              "время приготовления"
+            ]
+          }
+        },
+        "hybrid_system": {
+          "enabled": true,
+          "weights": {
+            "collaborative": 0.6,
+            "content_based": 0.4
+          },
+          "reranking": {
+            "enabled": true,
+            "factors": [
+              "сезонность",
+              "популярность",
+              "новизна"
+            ]
+          }
+        }
+      },
+      "user_segmentation": {
+        "clustering": {
+          "model": "kmeans",
+          "parameters": {
+            "n_clusters": 5,
+            "random_state": 42
+          },
+          "features": [
+            "частота_визитов",
+            "предпочтения_кухни",
+            "ценовой_сегмент",
+            "время_чтения"
+          ]
+        },
+        "behavioral_analysis": {
+          "model": "sequential_patterns",
+          "parameters": {
+            "window_size": 10,
+            "min_support": 0.01
+          },
+          "tracking": [
+            "просмотры_страниц",
+            "клики",
+            "время_на_странице",
+            "конверсии"
+          ]
+        }
+      }
+    },
+    "natural_language_processing": {
+      "sentiment_analysis": {
+        "model": "bert_multilingual",
+        "parameters": {
+          "max_length": 512,
+          "batch_size": 32
+        },
+        "applications": [
+          "комментарии",
+          "отзывы",
+          "социальные_медиа"
+        ]
+      },
+      "topic_modeling": {
+        "model": "lda",
+        "parameters": {
+          "n_topics": 10,
+          "max_iter": 500
+        },
+        "applications": [
+          "категоризация_контента",
+          "тренды_интересов",
+          "рекомендации"
+        ]
+      },
+      "text_summarization": {
+        "model": "t5",
+        "parameters": {
+          "max_length": 150,
+          "min_length": 50,
+          "length_penalty": 2.0
+        },
+        "applications": [
+          "превью_статей",
+          "email_дайджесты",
+          "push_уведомления"
+        ]
+      }
+    },
+    "optimization": {
+      "a_b_testing": {
+        "experiments": {
+          "titles": {
+            "variants": 3,
+            "metrics": ["CTR", "время_чтения"],
+            "minimum_sample_size": 1000
+          },
+          "images": {
+            "variants": 2,
+            "metrics": ["конверсии", "время_просмотра"],
+            "minimum_sample_size": 500
+          },
+          "рекомендации": {
+            "variants": 2,
+            "metrics": ["клики", "конверсии"],
+            "minimum_sample_size": 2000
+          }
+        },
+        "statistical_significance": {
+          "confidence_level": 0.95,
+          "power": 0.8
+        }
+      },
+      "performance_monitoring": {
+        "metrics": {
+          "latency": {
+            "threshold": "200ms",
+            "p95": "500ms"
+          },
+          "accuracy": {
+            "minimum": 0.8,
+            "target": 0.9
+          },
+          "resource_usage": {
+            "cpu_threshold": "80%",
+            "memory_threshold": "70%"
+          }
+        },
+        "alerts": {
+          "channels": ["slack", "email"],
+          "thresholds": {
+            "critical": "immediate",
+            "warning": "30_minutes"
+          }
+        }
+      }
+    }
+  },
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2024-01-30",
+    "responsible": {
+      "ml_engineer": "Дмитрий Волков",
+      "data_scientist": "Мария Соколова",
+      "contact": "ml@versal-restaurant.ru"
+    }
+  }
+} 

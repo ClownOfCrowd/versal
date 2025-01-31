@@ -1,0 +1,260 @@
+{
+  "booking_integration": {
+    "api": {
+      "endpoint": "https://api.versal-restaurant.ru/v1/bookings",
+      "methods": {
+        "check_availability": {
+          "method": "GET",
+          "path": "/availability",
+          "params": ["date", "time", "guests"],
+          "cache_duration": "5m"
+        },
+        "create_booking": {
+          "method": "POST",
+          "path": "/create",
+          "required_fields": [
+            "name",
+            "phone",
+            "date",
+            "time",
+            "guests"
+          ]
+        },
+        "update_booking": {
+          "method": "PUT",
+          "path": "/update/{booking_id}",
+          "required_fields": ["booking_id"]
+        },
+        "cancel_booking": {
+          "method": "DELETE",
+          "path": "/cancel/{booking_id}",
+          "required_fields": ["booking_id"]
+        }
+      },
+      "headers": {
+        "Content-Type": "application/json",
+        "Api-Version": "1.0",
+        "Api-Key": "{{API_KEY}}"
+      }
+    },
+    "validation": {
+      "rules": {
+        "name": {
+          "min_length": 2,
+          "max_length": 100,
+          "pattern": "^[А-Яа-яЁё\\s-]+$",
+          "error_message": "Пожалуйста, введите корректное имя"
+        },
+        "phone": {
+          "pattern": "^\\+7\\s?\\(\\d{3}\\)\\s?\\d{3}-\\d{2}-\\d{2}$",
+          "error_message": "Пожалуйста, введите корректный номер телефона"
+        },
+        "date": {
+          "min": "today",
+          "max": "+30d",
+          "excluded_dates": ["2024-01-01", "2024-05-09"],
+          "error_message": "Выберите дату в пределах 30 дней"
+        },
+        "time": {
+          "intervals": ["12:00-23:00"],
+          "step": "30m",
+          "last_booking": "22:00",
+          "error_message": "Выберите время в рабочие часы ресторана"
+        },
+        "guests": {
+          "min": 1,
+          "max": 20,
+          "special_conditions": {
+            "more_than_8": {
+              "requires_deposit": true,
+              "deposit_amount": "5000"
+            }
+          },
+          "error_message": "Количество гостей должно быть от 1 до 20"
+        }
+      }
+    },
+    "notifications": {
+      "booking_created": {
+        "client": {
+          "sms": {
+            "template": "Ваш столик забронирован на {date} {time}. Ждем вас в ресторане Versal! Подтверждение: {booking_id}",
+            "sender": "VERSAL"
+          },
+          "email": {
+            "template": "booking_confirmation",
+            "subject": "Подтверждение бронирования - Ресторан Versal",
+            "from": "reservations@versal-restaurant.ru"
+          }
+        },
+        "restaurant": {
+          "email": {
+            "to": ["host@versal-restaurant.ru", "manager@versal-restaurant.ru"],
+            "template": "new_booking_internal",
+            "subject": "Новое бронирование: {date} {time}, {guests} гостей"
+          },
+          "telegram": {
+            "chat_id": "versal_bookings",
+            "template": "🆕 Бронирование\n📅 {date}\n⏰ {time}\n👥 {guests} гостей\n📞 {phone}"
+          }
+        }
+      },
+      "booking_reminder": {
+        "timing": {
+          "first": "24h_before",
+          "second": "2h_before"
+        },
+        "channels": {
+          "sms": {
+            "template": "Напоминаем о вашем бронировании в ресторане Versal сегодня в {time}. Ждем вас!",
+            "sender": "VERSAL"
+          },
+          "email": {
+            "template": "booking_reminder",
+            "subject": "Напоминание о бронировании - Ресторан Versal"
+          }
+        }
+      },
+      "special_requests": {
+        "triggers": [
+          {
+            "condition": "guests > 8",
+            "notification": {
+              "to": ["chef@versal-restaurant.ru"],
+              "template": "large_group_booking",
+              "priority": "high"
+            }
+          },
+          {
+            "condition": "has_special_dietary",
+            "notification": {
+              "to": ["chef@versal-restaurant.ru"],
+              "template": "dietary_requirements",
+              "priority": "high"
+            }
+          }
+        ]
+      }
+    },
+    "table_management": {
+      "zones": [
+        {
+          "id": "main_hall",
+          "name": "Основной зал",
+          "capacity": {
+            "total": 60,
+            "table_configs": [
+              {
+                "size": 2,
+                "count": 8
+              },
+              {
+                "size": 4,
+                "count": 6
+              },
+              {
+                "size": 6,
+                "count": 4
+              }
+            ]
+          }
+        },
+        {
+          "id": "veranda",
+          "name": "Веранда",
+          "seasonal": true,
+          "season": {
+            "start": "15-05",
+            "end": "15-09"
+          },
+          "capacity": {
+            "total": 40,
+            "table_configs": [
+              {
+                "size": 2,
+                "count": 6
+              },
+              {
+                "size": 4,
+                "count": 5
+              }
+            ]
+          }
+        },
+        {
+          "id": "private_room",
+          "name": "Приватная комната",
+          "capacity": {
+            "min": 8,
+            "max": 20,
+            "requires_deposit": true
+          }
+        }
+      ],
+      "special_conditions": {
+        "holidays": {
+          "deposit_required": true,
+          "dates": [
+            "2024-02-14",
+            "2024-03-08",
+            "2024-12-31"
+          ]
+        },
+        "large_groups": {
+          "threshold": 8,
+          "requirements": [
+            "deposit",
+            "menu_pre_order",
+            "manager_approval"
+          ]
+        }
+      }
+    },
+    "analytics": {
+      "tracking": {
+        "events": [
+          "form_view",
+          "form_start",
+          "form_complete",
+          "form_abandon",
+          "booking_success",
+          "booking_error"
+        ],
+        "properties": {
+          "user_type": ["new", "returning"],
+          "device_type": ["desktop", "tablet", "mobile"],
+          "traffic_source": ["direct", "organic", "referral", "social"]
+        }
+      },
+      "reporting": {
+        "daily": {
+          "metrics": [
+            "total_bookings",
+            "conversion_rate",
+            "average_party_size",
+            "popular_times"
+          ],
+          "delivery": ["email", "dashboard"]
+        },
+        "monthly": {
+          "metrics": [
+            "booking_trends",
+            "cancellation_rate",
+            "revenue_impact",
+            "customer_satisfaction"
+          ],
+          "delivery": ["email", "dashboard", "pdf"]
+        }
+      }
+    }
+  },
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2024-01-30",
+    "responsible": {
+      "backend_developer": "Игорь Смирнов",
+      "system_architect": "Дмитрий Николаев",
+      "contact": "development@versal-restaurant.ru"
+    }
+  }
+} 

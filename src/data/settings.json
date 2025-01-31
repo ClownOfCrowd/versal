@@ -1,0 +1,167 @@
+{
+  "site": {
+    "name": "Luxury Restaurant",
+    "domain": "luxury-restaurant.ru",
+    "environment": {
+      "production": {
+        "url": "https://luxury-restaurant.ru",
+        "api": "https://api.luxury-restaurant.ru"
+      },
+      "staging": {
+        "url": "https://staging.luxury-restaurant.ru",
+        "api": "https://api-staging.luxury-restaurant.ru"
+      },
+      "development": {
+        "url": "http://localhost:3000",
+        "api": "http://localhost:3001"
+      }
+    },
+    "languages": [
+      {
+        "code": "ru",
+        "name": "Русский",
+        "default": true
+      },
+      {
+        "code": "en",
+        "name": "English",
+        "default": false
+      }
+    ]
+  },
+  "api": {
+    "version": "v1",
+    "endpoints": {
+      "booking": "/api/v1/booking",
+      "menu": "/api/v1/menu",
+      "orders": "/api/v1/orders",
+      "users": "/api/v1/users",
+      "events": "/api/v1/events"
+    },
+    "rateLimit": {
+      "requests": 100,
+      "period": "1m"
+    },
+    "timeout": 30000
+  },
+  "features": {
+    "booking": {
+      "enabled": true,
+      "maxDaysInAdvance": 30,
+      "timeSlotInterval": 30,
+      "confirmationRequired": true
+    },
+    "delivery": {
+      "enabled": true,
+      "radius": 10,
+      "minOrderAmount": 3000
+    },
+    "loyalty": {
+      "enabled": true,
+      "pointsExpiration": 365
+    }
+  },
+  "security": {
+    "auth": {
+      "sessionTimeout": 3600,
+      "maxLoginAttempts": 5,
+      "passwordPolicy": {
+        "minLength": 8,
+        "requireNumbers": true,
+        "requireSpecialChars": true,
+        "requireUppercase": true
+      }
+    },
+    "cors": {
+      "allowedOrigins": [
+        "https://luxury-restaurant.ru",
+        "https://admin.luxury-restaurant.ru"
+      ],
+      "allowedMethods": ["GET", "POST", "PUT", "DELETE"],
+      "allowCredentials": true
+    }
+  },
+  "media": {
+    "images": {
+      "formats": ["jpg", "webp", "png"],
+      "sizes": {
+        "thumbnail": {
+          "width": 150,
+          "height": 150
+        },
+        "medium": {
+          "width": 800,
+          "height": 600
+        },
+        "large": {
+          "width": 1920,
+          "height": 1080
+        }
+      },
+      "quality": {
+        "jpg": 85,
+        "webp": 80
+      },
+      "maxFileSize": 5242880
+    },
+    "storage": {
+      "provider": "cloudinary",
+      "folder": "luxury-restaurant",
+      "cdn": "https://cdn.luxury-restaurant.ru"
+    }
+  },
+  "email": {
+    "provider": "sendgrid",
+    "from": {
+      "name": "Luxury Restaurant",
+      "email": "info@luxury-restaurant.ru"
+    },
+    "templates": {
+      "booking": {
+        "confirmation": "d-abc123",
+        "reminder": "d-def456",
+        "cancellation": "d-ghi789"
+      },
+      "order": {
+        "confirmation": "d-jkl012",
+        "delivery": "d-mno345",
+        "feedback": "d-pqr678"
+      }
+    }
+  },
+  "analytics": {
+    "google": {
+      "enabled": true,
+      "trackingId": "UA-XXXXXXXX-X"
+    },
+    "yandex": {
+      "enabled": true,
+      "metrikaId": "XXXXXXXX"
+    },
+    "facebook": {
+      "enabled": true,
+      "pixelId": "XXXXXXXXXX"
+    }
+  },
+  "cache": {
+    "static": {
+      "maxAge": 2592000,
+      "immutable": true
+    },
+    "api": {
+      "maxAge": 300,
+      "staleWhileRevalidate": 60
+    }
+  },
+  "seo": {
+    "robots": {
+      "production": "User-agent: *\nAllow: /",
+      "other": "User-agent: *\nDisallow: /"
+    },
+    "sitemap": {
+      "enabled": true,
+      "changefreq": "daily",
+      "priority": 0.8
+    }
+  }
+} 

@@ -1,0 +1,141 @@
+{
+  "venues": [
+    {
+      "id": "main-hall",
+      "name": "Основной зал",
+      "description": "Роскошный зал с панорамными окнами и видом на город",
+      "capacity": {
+        "banquet": 80,
+        "reception": 120
+      },
+      "features": [
+        "Панорамные окна",
+        "Профессиональное звуковое оборудование",
+        "Проектор и экран",
+        "Сцена для выступлений",
+        "Танцпол"
+      ],
+      "images": [
+        "/images/venues/main-hall-1.jpg",
+        "/images/venues/main-hall-2.jpg"
+      ]
+    },
+    {
+      "id": "wine-room",
+      "name": "Винный зал",
+      "description": "Камерное пространство с винными шкафами и дегустационным столом",
+      "capacity": {
+        "banquet": 20,
+        "reception": 30
+      },
+      "features": [
+        "Винные шкафы",
+        "Профессиональное освещение",
+        "Климат-контроль",
+        "Дегустационный стол"
+      ],
+      "images": [
+        "/images/venues/wine-room-1.jpg",
+        "/images/venues/wine-room-2.jpg"
+      ]
+    }
+  ],
+  "eventTypes": [
+    {
+      "id": "wedding",
+      "name": "Свадьба",
+      "description": "Незабываемое торжество в роскошной обстановке",
+      "image": "/images/events/wedding.jpg",
+      "minGuests": 30,
+      "maxGuests": 120,
+      "pricePerPerson": 12000,
+      "includes": [
+        "Приветственные напитки",
+        "Банкетное меню",
+        "Свадебный торт",
+        "Цветочные композиции",
+        "Координатор мероприятия"
+      ],
+      "additionalServices": [
+        {
+          "id": "wedding-photo",
+          "name": "Фотосессия",
+          "price": 35000,
+          "description": "3 часа работы профессионального фотографа"
+        },
+        {
+          "id": "wedding-music",
+          "name": "Живая музыка",
+          "price": 45000,
+          "description": "Джазовый квартет или классическое трио"
+        }
+      ]
+    },
+    {
+      "id": "corporate",
+      "name": "Корпоративное мероприятие",
+      "description": "Деловые встречи и корпоративные праздники",
+      "image": "/images/events/corporate.jpg",
+      "minGuests": 20,
+      "maxGuests": 100,
+      "pricePerPerson": 8000,
+      "includes": [
+        "Кофе-брейки",
+        "Бизнес-ланч",
+        "Проекционное оборудование",
+        "Координатор мероприятия"
+      ],
+      "additionalServices": [
+        {
+          "id": "corp-team",
+          "name": "Тимбилдинг",
+          "price": 50000,
+          "description": "Кулинарный мастер-класс от шеф-повара"
+        },
+        {
+          "id": "corp-wine",
+          "name": "Винная дегустация",
+          "price": 40000,
+          "description": "Дегустация премиальных вин с сомелье"
+        }
+      ]
+    }
+  ],
+  "specialEvents": [
+    {
+      "id": "wine-tasting",
+      "name": "Дегустации вин",
+      "description": "Регулярные дегустации редких вин с профессиональным сомелье",
+      "schedule": "Каждый четверг",
+      "price": 15000,
+      "image": "/images/events/wine-tasting.jpg",
+      "duration": "2.5 часа",
+      "maxParticipants": 12
+    },
+    {
+      "id": "chef-table",
+      "name": "Ужин за столом шефа",
+      "description": "Уникальный гастрономический опыт с дегустационным меню от шеф-повара",
+      "schedule": "По предварительному бронированию",
+      "price": 25000,
+      "image": "/images/events/chef-table.jpg",
+      "duration": "3 часа",
+      "maxParticipants": 8
+    }
+  ],
+  "bookingPolicy": {
+    "deposit": "30% от общей стоимости",
+    "cancellation": "Бесплатная отмена за 72 часа",
+    "minimumNotice": "14 дней для крупных мероприятий",
+    "paymentMethods": [
+      "Банковский перевод",
+      "Кредитная карта",
+      "Наличные"
+    ],
+    "restrictions": [
+      "Запрет на пиротехнику",
+      "Ограничение по времени до 23:00",
+      "Дресс-код"
+    ]
+  }
+} 

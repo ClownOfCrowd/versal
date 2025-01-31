@@ -1,0 +1,144 @@
+{
+  "categories": [
+    {
+      "id": "interior",
+      "title": "Интерьер",
+      "description": "Изысканный дизайн и атмосфера роскоши",
+      "cover": "/images/gallery/interior/cover.jpg",
+      "images": [
+        {
+          "id": "main-hall",
+          "title": "Основной зал",
+          "description": "Просторный зал с панорамными окнами и видом на город",
+          "image": {
+            "full": "/images/gallery/interior/main-hall.jpg",
+            "thumbnail": "/images/gallery/interior/thumbnails/main-hall.jpg",
+            "alt": "Основной зал ресторана с панорамными окнами"
+          },
+          "tags": ["зал", "панорамный вид", "интерьер"]
+        },
+        {
+          "id": "wine-room",
+          "title": "Винный зал",
+          "description": "Уютное пространство с коллекцией редких вин",
+          "image": {
+            "full": "/images/gallery/interior/wine-room.jpg",
+            "thumbnail": "/images/gallery/interior/thumbnails/wine-room.jpg",
+            "alt": "Винный зал с винными шкафами"
+          },
+          "tags": ["вино", "дегустация", "интерьер"]
+        },
+        {
+          "id": "private-room",
+          "title": "VIP-кабинет",
+          "description": "Отдельный кабинет для приватных встреч и ужинов",
+          "image": {
+            "full": "/images/gallery/interior/private-room.jpg",
+            "thumbnail": "/images/gallery/interior/thumbnails/private-room.jpg",
+            "alt": "VIP-кабинет для частных мероприятий"
+          },
+          "tags": ["VIP", "приватность", "интерьер"]
+        }
+      ]
+    },
+    {
+      "id": "cuisine",
+      "title": "Кухня",
+      "description": "Авторские блюда от нашего шеф-повара",
+      "cover": "/images/gallery/cuisine/cover.jpg",
+      "images": [
+        {
+          "id": "signature-dish",
+          "title": "Фирменное блюдо",
+          "description": "Филе миньон с трюфельным соусом и сезонными овощами",
+          "image": {
+            "full": "/images/gallery/cuisine/signature-dish.jpg",
+            "thumbnail": "/images/gallery/cuisine/thumbnails/signature-dish.jpg",
+            "alt": "Филе миньон с трюфельным соусом"
+          },
+          "tags": ["мясо", "основное блюдо", "фирменное"]
+        },
+        {
+          "id": "dessert",
+          "title": "Авторский десерт",
+          "description": "Шоколадный сувид с карамельной текстурой",
+          "image": {
+            "full": "/images/gallery/cuisine/dessert.jpg",
+            "thumbnail": "/images/gallery/cuisine/thumbnails/dessert.jpg",
+            "alt": "Авторский шоколадный десерт"
+          },
+          "tags": ["десерт", "шоколад", "авторская кухня"]
+        },
+        {
+          "id": "wine-pairing",
+          "title": "Винное сопровождение",
+          "description": "Подборка вин к дегустационному меню",
+          "image": {
+            "full": "/images/gallery/cuisine/wine-pairing.jpg",
+            "thumbnail": "/images/gallery/cuisine/thumbnails/wine-pairing.jpg",
+            "alt": "Бокалы вина для дегустационного меню"
+          },
+          "tags": ["вино", "напитки", "дегустация"]
+        }
+      ]
+    },
+    {
+      "id": "events",
+      "title": "Мероприятия",
+      "description": "Особые события и праздники в нашем ресторане",
+      "cover": "/images/gallery/events/cover.jpg",
+      "images": [
+        {
+          "id": "wedding",
+          "title": "Свадебное торжество",
+          "description": "Оформление зала для свадебного банкета",
+          "image": {
+            "full": "/images/gallery/events/wedding.jpg",
+            "thumbnail": "/images/gallery/events/thumbnails/wedding.jpg",
+            "alt": "Свадебное оформление зала"
+          },
+          "tags": ["свадьба", "банкет", "торжество"]
+        },
+        {
+          "id": "master-class",
+          "title": "Кулинарный мастер-класс",
+          "description": "Мастер-класс от шеф-повара по итальянской кухне",
+          "image": {
+            "full": "/images/gallery/events/master-class.jpg",
+            "thumbnail": "/images/gallery/events/thumbnails/master-class.jpg",
+            "alt": "Кулинарный мастер-класс от шеф-повара"
+          },
+          "tags": ["мастер-класс", "обучение", "кулинария"]
+        },
+        {
+          "id": "wine-tasting",
+          "title": "Винная дегустация",
+          "description": "Вечер дегустации вин Бордо",
+          "image": {
+            "full": "/images/gallery/events/wine-tasting.jpg",
+            "thumbnail": "/images/gallery/events/thumbnails/wine-tasting.jpg",
+            "alt": "Винная дегустация"
+          },
+          "tags": ["вино", "дегустация", "мероприятие"]
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "image_sizes": {
+      "thumbnail": {
+        "width": 300,
+        "height": 200,
+        "quality": 80
+      },
+      "full": {
+        "width": 1920,
+        "height": 1080,
+        "quality": 90
+      }
+    },
+    "formats": ["jpg", "webp"],
+    "cdn_base_url": "https://cdn.luxury-restaurant.ru",
+    "last_updated": "2024-01-29"
+  }
+} 

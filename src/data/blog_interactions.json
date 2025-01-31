@@ -1,0 +1,246 @@
+{
+  "interactive_features": {
+    "comments": {
+      "enabled": true,
+      "moderation": {
+        "ai_powered": true,
+        "filters": [
+          "Спам",
+          "Нецензурная лексика",
+          "Рекламные сообщения"
+        ],
+        "response_time": "до 2 часов"
+      },
+      "notifications": {
+        "admin": ["новые комментарии", "жалобы", "популярные обсуждения"],
+        "user": ["ответы на комментарии", "лайки", "упоминания"]
+      }
+    },
+    "ratings": {
+      "types": [
+        {
+          "name": "рецепты",
+          "criteria": [
+            "Понятность инструкций",
+            "Доступность ингредиентов",
+            "Вкус результата",
+            "Сложность приготовления"
+          ],
+          "scale": "1-5 звезд"
+        },
+        {
+          "name": "статьи",
+          "criteria": [
+            "Полезность информации",
+            "Качество изложения",
+            "Актуальность"
+          ],
+          "scale": "1-5 звезд"
+        }
+      ],
+      "analytics": {
+        "average_score": true,
+        "trending_content": true,
+        "user_segments": true
+      }
+    },
+    "social_sharing": {
+      "platforms": [
+        {
+          "name": "Instagram",
+          "features": [
+            "Шаринг рецептов",
+            "Stories с дегустациями",
+            "Highlights с мастер-классами"
+          ]
+        },
+        {
+          "name": "Telegram",
+          "features": [
+            "Канал с новостями",
+            "Бот для бронирования",
+            "Чат с сомелье"
+          ]
+        },
+        {
+          "name": "VK",
+          "features": [
+            "Группа ресторана",
+            "Статьи",
+            "Мероприятия"
+          ]
+        }
+      ],
+      "share_buttons": {
+        "position": ["конец статьи", "плавающая панель"],
+        "counters": true,
+        "quick_share": {
+          "enabled": true,
+          "platforms": ["WhatsApp", "Telegram", "VK"]
+        }
+      }
+    },
+    "personalization": {
+      "user_preferences": {
+        "dietary": [
+          "Вегетарианское",
+          "Безглютеновое",
+          "Без лактозы"
+        ],
+        "cuisine_interests": [
+          "Основные блюда",
+          "Десерты",
+          "Вина",
+          "Коктейли"
+        ],
+        "notification_settings": {
+          "email": {
+            "frequency": ["ежедневно", "еженедельно", "ежемесячно"],
+            "types": ["новые рецепты", "спецпредложения", "мероприятия"]
+          },
+          "push": {
+            "enabled": true,
+            "types": ["новые посты", "ответы", "акции"]
+          }
+        }
+      },
+      "ai_recommendations": {
+        "based_on": [
+          "История просмотров",
+          "Любимые рецепты",
+          "Диетические предпочтения",
+          "Сезонность"
+        ],
+        "features": [
+          "Персонализированная подборка рецептов",
+          "Рекомендации по винам",
+          "Индивидуальные предложения"
+        ]
+      }
+    },
+    "interactive_elements": {
+      "recipe_calculator": {
+        "features": [
+          "Пересчет порций",
+          "Конвертация мер",
+          "Расчет калорий"
+        ],
+        "supported_units": {
+          "weight": ["граммы", "унции", "фунты"],
+          "volume": ["мл", "л", "стаканы", "ложки"],
+          "temperature": ["Цельсий", "Фаренгейт"]
+        }
+      },
+      "wine_pairing_tool": {
+        "features": [
+          "Подбор вина к блюду",
+          "Информация о винах",
+          "Рейтинги и отзывы"
+        ],
+        "filters": [
+          "Регион",
+          "Сорт винограда",
+          "Ценовой диапазон",
+          "Год урожая"
+        ]
+      },
+      "booking_widget": {
+        "features": [
+          "Бронирование столика",
+          "Выбор места",
+          "Специальные пожелания"
+        ],
+        "integration": {
+          "calendar": true,
+          "crm": true,
+          "notifications": true
+        }
+      }
+    },
+    "gamification": {
+      "user_achievements": {
+        "badges": [
+          {
+            "name": "Гурман",
+            "description": "Попробовал более 10 разных блюд",
+            "icon": "/images/badges/gourmet.svg"
+          },
+          {
+            "name": "Сомелье",
+            "description": "Оставил 5 отзывов о винах",
+            "icon": "/images/badges/sommelier.svg"
+          },
+          {
+            "name": "Шеф-повар",
+            "description": "Приготовил 3 рецепта из блога",
+            "icon": "/images/badges/chef.svg"
+          }
+        ],
+        "levels": {
+          "points_system": {
+            "comments": 5,
+            "reviews": 10,
+            "shares": 3,
+            "recipe_completions": 15
+          },
+          "rewards": {
+            "level_5": "Скидка 10% на следующий визит",
+            "level_10": "Бесплатный десерт",
+            "level_20": "Приватная дегустация вин"
+          }
+        }
+      },
+      "challenges": {
+        "weekly": {
+          "name": "Кулинарный вызов",
+          "description": "Приготовьте блюдо недели и поделитесь результатом",
+          "prizes": ["Ужин на двоих", "Кулинарный мастер-класс"]
+        },
+        "monthly": {
+          "name": "Винный эксперт",
+          "description": "Угадайте регион происхождения вина месяца",
+          "prizes": ["Бутылка премиального вина", "Дегустационный сет"]
+        }
+      }
+    }
+  },
+  "analytics_integration": {
+    "metrics": {
+      "engagement": [
+        "Время на странице",
+        "Глубина прокрутки",
+        "Количество взаимодействий",
+        "Показатель возврата"
+      ],
+      "conversion": [
+        "Бронирования через блог",
+        "Заказы упомянутых блюд",
+        "Участие в мероприятиях"
+      ],
+      "social": [
+        "Количество шеров",
+        "Комментарии",
+        "Охват в соцсетях"
+      ]
+    },
+    "reporting": {
+      "frequency": "еженедельно",
+      "automated_insights": true,
+      "custom_dashboards": {
+        "content_performance": true,
+        "user_engagement": true,
+        "revenue_impact": true
+      }
+    }
+  },
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2024-01-29",
+    "supported_languages": ["ru", "en", "fr"],
+    "responsible": {
+      "technical_lead": "Игорь Петров",
+      "content_manager": "Анна Иванова",
+      "contact_email": "tech@versal-restaurant.ru"
+    }
+  }
+} 

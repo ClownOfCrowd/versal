@@ -1,0 +1,138 @@
+{
+  "delivery": {
+    "zones": [
+      {
+        "id": 1,
+        "name": "Центр",
+        "description": "Центральный район города",
+        "minOrderAmount": 3000,
+        "deliveryFee": 0,
+        "estimatedTime": "30-45 минут",
+        "coordinates": {
+          "center": {
+            "lat": 55.757539,
+            "lng": 37.613439
+          },
+          "radius": 3
+        }
+      },
+      {
+        "id": 2,
+        "name": "Ближайшие районы",
+        "description": "Районы, прилегающие к центру",
+        "minOrderAmount": 3500,
+        "deliveryFee": 500,
+        "estimatedTime": "45-60 минут",
+        "coordinates": {
+          "center": {
+            "lat": 55.757539,
+            "lng": 37.613439
+          },
+          "radius": 7
+        }
+      }
+    ],
+    "schedule": {
+      "monday": "12:00 - 22:00",
+      "tuesday": "12:00 - 22:00",
+      "wednesday": "12:00 - 22:00",
+      "thursday": "12:00 - 22:00",
+      "friday": "12:00 - 23:00",
+      "saturday": "12:00 - 23:00",
+      "sunday": "12:00 - 22:00"
+    },
+    "partners": [
+      {
+        "id": "yandex",
+        "name": "Яндекс.Еда",
+        "logo": "/images/delivery/yandex.svg",
+        "link": "https://eda.yandex.ru/luxury-restaurant",
+        "commission": 0
+      },
+      {
+        "id": "delivery",
+        "name": "Delivery Club",
+        "logo": "/images/delivery/delivery-club.svg",
+        "link": "https://delivery-club.ru/luxury-restaurant",
+        "commission": 0
+      }
+    ]
+  },
+  "takeaway": {
+    "schedule": {
+      "monday": "12:00 - 23:00",
+      "tuesday": "12:00 - 23:00",
+      "wednesday": "12:00 - 23:00",
+      "thursday": "12:00 - 23:00",
+      "friday": "12:00 - 00:00",
+      "saturday": "12:00 - 00:00",
+      "sunday": "12:00 - 23:00"
+    },
+    "discount": 10,
+    "minOrderTime": 30,
+    "pickupPoint": {
+      "description": "Отдельный вход для самовывоза со стороны парковки",
+      "coordinates": {
+        "lat": 55.757539,
+        "lng": 37.613439
+      }
+    }
+  },
+  "packaging": {
+    "standard": {
+      "name": "Стандартная упаковка",
+      "description": "Экологичная упаковка с поддержанием температуры",
+      "price": 0
+    },
+    "premium": {
+      "name": "Премиальная упаковка",
+      "description": "Подарочная упаковка премиум-класса",
+      "price": 500
+    }
+  },
+  "restrictions": {
+    "delivery": [
+      "Доставка осуществляется только в пределах указанных зон",
+      "Некоторые блюда и напитки недоступны для доставки",
+      "Время доставки может увеличиться в часы пик и при неблагоприятных погодных условиях"
+    ],
+    "unavailableItems": [
+      {
+        "id": "wine",
+        "name": "Алкогольные напитки",
+        "reason": "Запрещено законодательством"
+      },
+      {
+        "id": "raw",
+        "name": "Блюда с сырыми морепродуктами",
+        "reason": "Не сохраняют качество при доставке"
+      }
+    ]
+  },
+  "paymentMethods": {
+    "online": [
+      "Банковские карты",
+      "Apple Pay",
+      "Google Pay",
+      "СБП"
+    ],
+    "offline": [
+      "Наличные",
+      "Банковские карты",
+      "Карты лояльности ресторана"
+    ]
+  },
+  "specialConditions": {
+    "corporateOrders": {
+      "minAmount": 15000,
+      "discount": 15,
+      "description": "Специальные условия для корпоративных заказов",
+      "contact": "corporate@luxury-restaurant.ru"
+    },
+    "events": {
+      "minAmount": 30000,
+      "description": "Кейтеринг и организация мероприятий",
+      "contact": "events@luxury-restaurant.ru"
+    }
+  }
+} 

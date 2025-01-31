@@ -1,0 +1,137 @@
+{
+  "tables": [
+    {
+      "id": "t1",
+      "name": "Столик у окна 1",
+      "zone": "window",
+      "capacity": {
+        "min": 2,
+        "max": 4
+      },
+      "description": "Уютный столик у панорамного окна с видом на город",
+      "features": ["вид на город", "естественное освещение"],
+      "position": {
+        "x": 100,
+        "y": 150
+      },
+      "image": "/images/tables/window-table-1.jpg"
+    },
+    {
+      "id": "t2",
+      "name": "VIP-кабинет",
+      "zone": "vip",
+      "capacity": {
+        "min": 4,
+        "max": 8
+      },
+      "description": "Отдельный кабинет с персональным обслуживанием",
+      "features": ["приватность", "отдельный сервис", "мультимедиа"],
+      "position": {
+        "x": 300,
+        "y": 200
+      },
+      "image": "/images/tables/vip-room.jpg"
+    },
+    {
+      "id": "t3",
+      "name": "Столик в винном зале",
+      "zone": "wine",
+      "capacity": {
+        "min": 2,
+        "max": 4
+      },
+      "description": "Столик в атмосфере винного зала с видом на коллекцию вин",
+      "features": ["винная атмосфера", "приглушенное освещение"],
+      "position": {
+        "x": 450,
+        "y": 250
+      },
+      "image": "/images/tables/wine-room-table.jpg"
+    }
+  ],
+  "timeSlots": {
+    "lunch": {
+      "start": "12:00",
+      "end": "16:00",
+      "duration": 120,
+      "lastBooking": "14:00"
+    },
+    "dinner": {
+      "start": "18:00",
+      "end": "23:00",
+      "duration": 120,
+      "lastBooking": "21:00"
+    }
+  },
+  "settings": {
+    "minAdvanceBooking": 2,
+    "maxAdvanceBooking": 30,
+    "maxPartySize": 12,
+    "depositRequired": {
+      "threshold": 6,
+      "amount": 5000
+    },
+    "cancellation": {
+      "freeUntil": 24,
+      "penalty": 2000
+    }
+  },
+  "specialRequests": [
+    {
+      "id": "birthday",
+      "name": "День рождения",
+      "description": "Особое оформление стола и комплимент от шеф-повара",
+      "price": 2500,
+      "notice": "Предупредите нас за 24 часа"
+    },
+    {
+      "id": "romantic",
+      "name": "Романтический ужин",
+      "description": "Свечи, цветы и особая сервировка",
+      "price": 3500,
+      "notice": "Предупредите нас за 24 часа"
+    },
+    {
+      "id": "wine-pairing",
+      "name": "Винное сопровождение",
+      "description": "Индивидуальный подбор вин к каждому блюду",
+      "price": 5000,
+      "notice": "Предупредите нас за 48 часов"
+    }
+  ],
+  "restrictions": {
+    "childPolicy": {
+      "minAge": 6,
+      "highChairs": true,
+      "childMenu": true
+    },
+    "dressCode": "Smart casual",
+    "allergyInfo": "Пожалуйста, сообщите о любых аллергиях при бронировании"
+  },
+  "layout": {
+    "zones": [
+      {
+        "id": "window",
+        "name": "У окна",
+        "description": "Столики с панорамным видом",
+        "capacity": 16
+      },
+      {
+        "id": "vip",
+        "name": "VIP-зона",
+        "description": "Отдельные кабинеты",
+        "capacity": 24
+      },
+      {
+        "id": "wine",
+        "name": "Винный зал",
+        "description": "Столики в винном зале",
+        "capacity": 20
+      }
+    ],
+    "dimensions": {
+      "width": 800,
+      "height": 600
+    }
+  }
+} 

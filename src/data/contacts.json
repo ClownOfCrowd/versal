@@ -1,0 +1,127 @@
+{
+  "main_restaurant": {
+    "name": "Luxury Restaurant",
+    "address": {
+      "street": "ул. Тверская, 21",
+      "city": "Москва",
+      "postal_code": "125009",
+      "country": "Россия",
+      "coordinates": {
+        "latitude": 55.768558,
+        "longitude": 37.595409
+      }
+    },
+    "contacts": {
+      "phone": {
+        "reservation": "+7 (495) 123-45-67",
+        "events": "+7 (495) 123-45-68",
+        "delivery": "+7 (495) 123-45-69"
+      },
+      "email": {
+        "general": "info@luxury-restaurant.ru",
+        "events": "events@luxury-restaurant.ru",
+        "press": "pr@luxury-restaurant.ru"
+      },
+      "social_media": {
+        "instagram": "luxury_restaurant_msk",
+        "facebook": "luxuryrestaurantmoscow",
+        "vk": "luxury_restaurant"
+      }
+    },
+    "hours": {
+      "restaurant": {
+        "monday_friday": {
+          "lunch": "12:00 - 16:00",
+          "dinner": "18:00 - 23:00"
+        },
+        "saturday_sunday": {
+          "brunch": "10:00 - 16:00",
+          "dinner": "18:00 - 23:00"
+        }
+      },
+      "bar": {
+        "monday_thursday": "12:00 - 00:00",
+        "friday_saturday": "12:00 - 02:00",
+        "sunday": "12:00 - 23:00"
+      }
+    },
+    "transportation": {
+      "metro": [
+        {
+          "station": "Пушкинская",
+          "lines": ["Таганско-Краснопресненская"],
+          "walking_time": "5 минут"
+        },
+        {
+          "station": "Тверская",
+          "lines": ["Замоскворецкая"],
+          "walking_time": "7 минут"
+        }
+      ],
+      "parking": {
+        "valet": true,
+        "price": "500 руб/час",
+        "capacity": 30,
+        "schedule": "Ежедневно с 12:00 до 00:00"
+      }
+    }
+  },
+  "delivery_zones": {
+    "zone_1": {
+      "name": "Центр",
+      "delivery_time": "30-45 минут",
+      "minimum_order": 3000,
+      "delivery_fee": 0
+    },
+    "zone_2": {
+      "name": "В пределах ТТК",
+      "delivery_time": "45-60 минут",
+      "minimum_order": 3000,
+      "delivery_fee": 300
+    },
+    "zone_3": {
+      "name": "За пределами ТТК (до 10 км)",
+      "delivery_time": "60-90 минут",
+      "minimum_order": 5000,
+      "delivery_fee": 500
+    }
+  },
+  "additional_info": {
+    "dress_code": "Smart Casual",
+    "age_restriction": "18+",
+    "languages": ["Русский", "English"],
+    "payment_methods": [
+      "Наличные",
+      "Банковские карты",
+      "Apple Pay",
+      "Google Pay",
+      "Криптовалюта"
+    ],
+    "accessibility": {
+      "wheelchair_access": true,
+      "elevator": true,
+      "disabled_parking": true,
+      "service_animals": true
+    }
+  },
+  "press_kit": {
+    "downloads": {
+      "logo": {
+        "formats": ["PNG", "SVG", "EPS"],
+        "url": "/downloads/press-kit/logo"
+      },
+      "photos": {
+        "interior": "/downloads/press-kit/interior",
+        "dishes": "/downloads/press-kit/dishes",
+        "team": "/downloads/press-kit/team"
+      },
+      "fact_sheet": "/downloads/press-kit/fact-sheet.pdf"
+    },
+    "press_contact": {
+      "name": "Анна Соколова",
+      "position": "PR-директор",
+      "phone": "+7 (495) 123-45-70",
+      "email": "pr@luxury-restaurant.ru"
+    }
+  }
+} 

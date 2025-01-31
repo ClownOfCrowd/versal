@@ -1,0 +1,224 @@
+{
+  "ai_system": {
+    "name": "VersalAI",
+    "version": "1.0",
+    "description": "Система искусственного интеллекта для автоматической генерации и управления контентом ресторана Versal",
+    "capabilities": {
+      "content_generation": {
+        "types": {
+          "recipes": {
+            "structure": {
+              "title": "Генерация привлекательных заголовков",
+              "description": "Краткое, но информативное описание блюда",
+              "history": "Исторический контекст и происхождение",
+              "ingredients": "Точные пропорции и альтернативы",
+              "instructions": "Пошаговый процесс приготовления",
+              "tips": "Профессиональные советы от шеф-повара",
+              "pairing": "Рекомендации по вину и напиткам"
+            },
+            "parameters": {
+              "tone": "Профессиональный, но доступный",
+              "length": "1500-2000 слов",
+              "complexity": "Средняя до высокой",
+              "target_audience": "Любители гастрономии"
+            }
+          },
+          "articles": {
+            "categories": {
+              "wine_culture": {
+                "topics": [
+                  "Регионы виноделия",
+                  "Сорта винограда",
+                  "Техники дегустации",
+                  "История виноделия"
+                ],
+                "tone": "Образовательный, экспертный"
+              },
+              "gastronomy": {
+                "topics": [
+                  "Кулинарные техники",
+                  "Сезонные продукты",
+                  "Тренды в гастрономии",
+                  "Интервью с экспертами"
+                ],
+                "tone": "Увлекательный, информативный"
+              }
+            },
+            "parameters": {
+              "length": "2000-2500 слов",
+              "style": "Журналистский с экспертными вставками",
+              "research_depth": "Глубокий анализ темы"
+            }
+          },
+          "news": {
+            "categories": {
+              "events": "Анонсы мероприятий",
+              "menu_updates": "Обновления меню",
+              "special_offers": "Специальные предложения"
+            },
+            "parameters": {
+              "length": "300-500 слов",
+              "tone": "Информативный, побуждающий к действию",
+              "urgency": "Высокая актуальность"
+            }
+          }
+        }
+      },
+      "content_optimization": {
+        "seo": {
+          "keyword_research": {
+            "sources": [
+              "Google Trends",
+              "Yandex.Wordstat",
+              "Отраслевые исследования"
+            ],
+            "parameters": {
+              "relevance": "Высокая",
+              "competition": "Средняя до низкой",
+              "search_volume": "От 1000 запросов/месяц"
+            }
+          },
+          "optimization_rules": {
+            "title": {
+              "length": "50-60 символов",
+              "keywords": "1-2 ключевых слова"
+            },
+            "meta_description": {
+              "length": "150-160 символов",
+              "call_to_action": true
+            },
+            "content": {
+              "keyword_density": "1.5-2.5%",
+              "readability": "Средний уровень",
+              "structure": "Логическая иерархия H1-H4"
+            }
+          }
+        },
+        "readability": {
+          "parameters": {
+            "sentence_length": "15-20 слов",
+            "paragraph_length": "3-4 предложения",
+            "vocabulary_level": "Средний+"
+          },
+          "style_guide": {
+            "tone": "Профессиональный, но дружелюбный",
+            "voice": "Активный залог",
+            "terminology": "Специализированная с пояснениями"
+          }
+        }
+      },
+      "image_processing": {
+        "generation": {
+          "types": [
+            "Фотореалистичные изображения блюд",
+            "Инфографика для рецептов",
+            "Иллюстрации для статей"
+          ],
+          "parameters": {
+            "resolution": "Минимум 2000x2000px",
+            "style": "Профессиональная фуд-фотография",
+            "format": ["JPG", "PNG", "WEBP"]
+          }
+        },
+        "optimization": {
+          "compression": "Умная компрессия с сохранением качества",
+          "responsive": {
+            "sizes": [
+              "thumbnail: 150x150",
+              "medium: 800x600",
+              "large: 1920x1080"
+            ],
+            "formats": {
+              "modern": "WEBP",
+              "fallback": "JPG"
+            }
+          }
+        }
+      },
+      "personalization": {
+        "user_profiling": {
+          "parameters": [
+            "История просмотров",
+            "Предпочтения в кухне",
+            "Диетические ограничения",
+            "Ценовые предпочтения"
+          ],
+          "algorithms": [
+            "Коллаборативная фильтрация",
+            "Контентная фильтрация",
+            "Гибридные рекомендации"
+          ]
+        },
+        "content_adaptation": {
+          "parameters": {
+            "difficulty_level": "Адаптация под уровень пользователя",
+            "ingredients": "Учет доступности продуктов",
+            "portion_size": "Персонализация порций",
+            "wine_recommendations": "Учет предпочтений в винах"
+          }
+        }
+      }
+    },
+    "quality_control": {
+      "validation": {
+        "accuracy": {
+          "fact_checking": "Автоматическая проверка фактов",
+          "recipe_testing": "Виртуальная симуляция приготовления",
+          "expert_review": "Проверка шеф-поваром и сомелье"
+        },
+        "uniqueness": {
+          "plagiarism_check": "Проверка на уникальность",
+          "style_consistency": "Соответствие стилю бренда"
+        }
+      },
+      "improvement": {
+        "feedback_analysis": {
+          "sources": [
+            "Комментарии пользователей",
+            "Рейтинги контента",
+            "Метрики вовлеченности"
+          ],
+          "actions": [
+            "Автоматическая корректировка контента",
+            "Обновление рекомендаций",
+            "Улучшение персонализации"
+          ]
+        }
+      }
+    },
+    "integration": {
+      "external_services": {
+        "translation": {
+          "languages": ["ru", "en", "fr"],
+          "quality": "Профессиональный перевод с учетом контекста"
+        },
+        "analytics": {
+          "tools": [
+            "Google Analytics",
+            "Yandex.Metrika",
+            "Custom tracking"
+          ],
+          "metrics": [
+            "Вовлеченность",
+            "Конверсии",
+            "Пользовательское поведение"
+          ]
+        }
+      },
+      "internal_systems": {
+        "crm": "Интеграция с системой управления рестораном",
+        "booking": "Синхронизация с системой бронирования",
+        "inventory": "Связь с системой учета продуктов"
+      }
+    }
+  },
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2024-01-29",
+    "responsible": {
+      "ai_engineer": "Михаил Сидоров",
+      "content_director": "Анна Иванова",
+      "contact": "ai@versal-restaurant.ru"
+    }
+  }
+} 

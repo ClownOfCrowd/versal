@@ -1,0 +1,213 @@
+{
+  "restaurant_name": "Versal",
+  "introduction": {
+    "title": "Меню",
+    "description": "Изысканная французская кухня от шеф-повара Андрея Петрова, вдохновленная традициями Прованса и современными гастрономическими тенденциями.",
+    "chef_note": "В нашем меню мы соединяем классические французские рецепты с лучшими сезонными продуктами, создавая неповторимые вкусовые сочетания."
+  },
+  "categories": {
+    "les_hors_d_oeuvre": {
+      "title": "Закуски",
+      "description": "Изысканное начало вашего гастрономического путешествия",
+      "items": [
+        {
+          "id": "foie_gras",
+          "name": "Фуа-гра",
+          "description": "Террин из утиной печени с бриошью, инжирным конфитюром и порто",
+          "price": 2800,
+          "weight": 120,
+          "allergens": ["глютен", "лактоза"],
+          "wine_pairing": "Sauternes, Château Suduiraut",
+          "image": "/images/dishes/foie-gras.jpg"
+        },
+        {
+          "id": "tartare",
+          "name": "Тартар из говядины",
+          "description": "Классический тартар из мраморной говядины с каперсами, корнишонами и перепелиным яйцом",
+          "price": 1900,
+          "weight": 180,
+          "allergens": ["яйца", "горчица"],
+          "wine_pairing": "Bourgogne Pinot Noir, Domaine Leroy",
+          "image": "/images/dishes/beef-tartare.jpg"
+        },
+        {
+          "id": "escargots",
+          "name": "Эскарго",
+          "description": "Виноградные улитки в чесночном масле с зеленью и багетом",
+          "price": 1600,
+          "weight": 150,
+          "allergens": ["глютен", "лактоза"],
+          "wine_pairing": "Chablis Premier Cru",
+          "image": "/images/dishes/escargots.jpg"
+        }
+      ]
+    },
+    "les_soupes": {
+      "title": "Супы",
+      "description": "Классические французские супы",
+      "items": [
+        {
+          "id": "soupe_oignon",
+          "name": "Луковый суп",
+          "description": "Традиционный французский луковый суп с гренками и сыром грюйер",
+          "price": 950,
+          "weight": 350,
+          "allergens": ["глютен", "лактоза"],
+          "wine_pairing": "Alsace Riesling",
+          "image": "/images/dishes/onion-soup.jpg"
+        },
+        {
+          "id": "bisque_homard",
+          "name": "Биск из омара",
+          "description": "Крем-суп из омара с коньяком и трюфельной пеной",
+          "price": 2200,
+          "weight": 300,
+          "allergens": ["ракообразные", "лактоза"],
+          "wine_pairing": "Meursault Premier Cru",
+          "image": "/images/dishes/lobster-bisque.jpg"
+        }
+      ]
+    },
+    "les_plats_principaux": {
+      "title": "Основные блюда",
+      "description": "Шедевры французской кухни",
+      "items": [
+        {
+          "id": "coq_au_vin",
+          "name": "Кок-о-вен",
+          "description": "Петух в красном вине с грибами, луком и картофельным пюре",
+          "price": 2800,
+          "weight": 450,
+          "allergens": ["лактоза", "сульфиты"],
+          "wine_pairing": "Gevrey-Chambertin",
+          "image": "/images/dishes/coq-au-vin.jpg"
+        },
+        {
+          "id": "sole_meuniere",
+          "name": "Соль мёньер",
+          "description": "Филе морского языка в соусе мёньер с каперсами и лимоном",
+          "price": 3200,
+          "weight": 320,
+          "allergens": ["рыба", "лактоза"],
+          "wine_pairing": "Puligny-Montrachet",
+          "image": "/images/dishes/sole-meuniere.jpg"
+        },
+        {
+          "id": "boeuf_bourguignon",
+          "name": "Бёф бургиньон",
+          "description": "Томленая говядина в красном вине с овощами и грибами",
+          "price": 2900,
+          "weight": 400,
+          "allergens": ["сульфиты"],
+          "wine_pairing": "Châteauneuf-du-Pape",
+          "image": "/images/dishes/boeuf-bourguignon.jpg"
+        }
+      ]
+    },
+    "les_desserts": {
+      "title": "Десерты",
+      "description": "Изысканное завершение трапезы",
+      "items": [
+        {
+          "id": "creme_brulee",
+          "name": "Крем-брюле",
+          "description": "Классический ванильный крем-брюле с карамельной корочкой",
+          "price": 950,
+          "weight": 160,
+          "allergens": ["яйца", "лактоза"],
+          "wine_pairing": "Sauternes",
+          "image": "/images/dishes/creme-brulee.jpg"
+        },
+        {
+          "id": "tarte_tatin",
+          "name": "Тарт Татен",
+          "description": "Карамелизированный яблочный тарт с ванильным мороженым",
+          "price": 1100,
+          "weight": 180,
+          "allergens": ["глютен", "лактоза"],
+          "wine_pairing": "Jurançon Moelleux",
+          "image": "/images/dishes/tarte-tatin.jpg"
+        },
+        {
+          "id": "souffle_chocolat",
+          "name": "Шоколадный суфле",
+          "description": "Горячий шоколадный суфле с ванильным соусом",
+          "price": 1200,
+          "weight": 150,
+          "allergens": ["глютен", "лактоза", "яйца"],
+          "wine_pairing": "Banyuls",
+          "image": "/images/dishes/chocolate-souffle.jpg"
+        }
+      ]
+    }
+  },
+  "tasting_menu": {
+    "title": "Дегустационное меню",
+    "description": "Гастрономическое путешествие из 7 перемен блюд",
+    "price": 12000,
+    "wine_pairing_price": 8000,
+    "duration": "2.5-3 часа",
+    "courses": [
+      {
+        "name": "Амюз-буш",
+        "description": "Крем из фуа-гра с малиновым желе"
+      },
+      {
+        "name": "Первая закуска",
+        "description": "Карпаччо из гребешка с трюфельным маслом"
+      },
+      {
+        "name": "Вторая закуска",
+        "description": "Террин из перепелки с фисташками"
+      },
+      {
+        "name": "Суп",
+        "description": "Консоме из утки с равиоли"
+      },
+      {
+        "name": "Рыбное блюдо",
+        "description": "Тюрбо с соусом шампань"
+      },
+      {
+        "name": "Мясное блюдо",
+        "description": "Каре ягненка с прованскими травами"
+      },
+      {
+        "name": "Десерт",
+        "description": "Шоколадный суфле с карамельным соусом"
+      }
+    ]
+  },
+  "metadata": {
+    "last_updated": "2024-01-29",
+    "currency": "RUB",
+    "prices_include_vat": true,
+    "chef": {
+      "name": "Андрей Петров",
+      "title": "Шеф-повар",
+      "awards": [
+        "Две звезды Мишлен (2023)",
+        "Шеф года по версии World Restaurant Awards"
+      ]
+    },
+    "allergens_info": {
+      "notice": "Если у вас есть аллергия на определенные продукты, пожалуйста, сообщите об этом официанту",
+      "common_allergens": [
+        "глютен",
+        "лактоза",
+        "яйца",
+        "рыба",
+        "ракообразные",
+        "орехи",
+        "сульфиты"
+      ]
+    },
+    "service": {
+      "bread_basket": "Подается комплиментарно",
+      "water": {
+        "still": 450,
+        "sparkling": 450
+      }
+    }
+  }
+} 

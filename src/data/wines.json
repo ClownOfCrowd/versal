@@ -1,0 +1,153 @@
+{
+  "categories": [
+    {
+      "id": "champagne",
+      "name": "Шампанское",
+      "description": "Изысканные шампанские вина из региона Шампань",
+      "items": [
+        {
+          "id": 1,
+          "name": "Dom Pérignon Vintage",
+          "year": 2012,
+          "region": "Шампань, Франция",
+          "producer": "Moët & Chandon",
+          "description": "Престижное кюве с нотами белых цветов, цитрусовых и минералов",
+          "price": 42000,
+          "volume": 750,
+          "type": "Брют",
+          "grapes": ["Пино Нуар", "Шардоне"],
+          "temperature": "8-10°C",
+          "rating": 98,
+          "image": "/images/wines/dom-perignon.jpg"
+        },
+        {
+          "id": 2,
+          "name": "Krug Grande Cuvée",
+          "year": "NV",
+          "region": "Шампань, Франция",
+          "producer": "Krug",
+          "description": "Многослойное шампанское с тонами печеного яблока, орехов и специй",
+          "price": 35000,
+          "volume": 750,
+          "type": "Брют",
+          "grapes": ["Пино Нуар", "Шардоне", "Пино Менье"],
+          "temperature": "8-10°C",
+          "rating": 97,
+          "image": "/images/wines/krug.jpg"
+        }
+      ]
+    },
+    {
+      "id": "red",
+      "name": "Красные вина",
+      "description": "Коллекция выдающихся красных вин со всего мира",
+      "items": [
+        {
+          "id": 3,
+          "name": "Château Lafite Rothschild",
+          "year": 2010,
+          "region": "Бордо, Франция",
+          "producer": "Château Lafite Rothschild",
+          "description": "Легендарное вино с ароматами черных ягод, кедра и табака",
+          "price": 120000,
+          "volume": 750,
+          "type": "Сухое красное",
+          "grapes": ["Каберне Совиньон", "Мерло"],
+          "temperature": "16-18°C",
+          "rating": 100,
+          "image": "/images/wines/lafite.jpg"
+        },
+        {
+          "id": 4,
+          "name": "Sassicaia",
+          "year": 2015,
+          "region": "Тоскана, Италия",
+          "producer": "Tenuta San Guido",
+          "description": "Супертосканское вино с богатым букетом черных фруктов и специй",
+          "price": 45000,
+          "volume": 750,
+          "type": "Сухое красное",
+          "grapes": ["Каберне Совиньон", "Каберне Фран"],
+          "temperature": "16-18°C",
+          "rating": 98,
+          "image": "/images/wines/sassicaia.jpg"
+        }
+      ]
+    },
+    {
+      "id": "white",
+      "name": "Белые вина",
+      "description": "Элегантные белые вина из лучших винодельческих регионов",
+      "items": [
+        {
+          "id": 5,
+          "name": "Montrachet Grand Cru",
+          "year": 2018,
+          "region": "Бургундия, Франция",
+          "producer": "Domaine de la Romanée-Conti",
+          "description": "Великолепное белое бургундское с нотами белых цветов и меда",
+          "price": 180000,
+          "volume": 750,
+          "type": "Сухое белое",
+          "grapes": ["Шардоне"],
+          "temperature": "12-14°C",
+          "rating": 99,
+          "image": "/images/wines/montrachet.jpg"
+        },
+        {
+          "id": 6,
+          "name": "Château d'Yquem",
+          "year": 2015,
+          "region": "Бордо, Франция",
+          "producer": "Château d'Yquem",
+          "description": "Легендарное сотерн с ароматами абрикоса, меда и ванили",
+          "price": 85000,
+          "volume": 750,
+          "type": "Сладкое белое",
+          "grapes": ["Семильон", "Совиньон Блан"],
+          "temperature": "10-12°C",
+          "rating": 98,
+          "image": "/images/wines/yquem.jpg"
+        }
+      ]
+    }
+  ],
+  "features": {
+    "byGlass": {
+      "title": "Вина по бокалам",
+      "description": "Избранные вина, доступные для заказа по бокалам",
+      "items": [
+        {
+          "id": 7,
+          "name": "Louis Roederer Cristal",
+          "year": 2013,
+          "price": 8500,
+          "volume": 150
+        },
+        {
+          "id": 8,
+          "name": "Château Margaux",
+          "year": 2015,
+          "price": 12000,
+          "volume": 150
+        }
+      ]
+    },
+    "pairings": {
+      "title": "Винное сопровождение",
+      "description": "Специально подобранные вина к нашим блюдам",
+      "items": [
+        {
+          "dishId": 1,
+          "wineId": 2,
+          "description": "Идеально сочетается с тартаром из тунца"
+        },
+        {
+          "dishId": 4,
+          "wineId": 3,
+          "description": "Превосходный аккомпанемент к филе миньон"
+        }
+      ]
+    }
+  }
+} 

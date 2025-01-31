@@ -1,0 +1,83 @@
+{
+  "offers": [
+    {
+      "id": 1,
+      "title": "Дегустационный сет",
+      "description": "7 премиальных блюд от шефа с винным сопровождением",
+      "image": "/images/offers/tasting-menu.jpg",
+      "price": 12000,
+      "oldPrice": 15000,
+      "endDate": "2024-02-28",
+      "isSeasonSpecial": true,
+      "details": {
+        "duration": "3 часа",
+        "persons": "2 персоны",
+        "includes": [
+          "Приветственный аперитив",
+          "7 блюд от шефа",
+          "4 бокала вина",
+          "Чай/кофе с десертом"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "title": "Романтический ужин",
+      "description": "Особое меню для двоих с видом на город",
+      "image": "/images/offers/romantic-dinner.jpg",
+      "price": 8000,
+      "endDate": "2024-02-14",
+      "isSeasonSpecial": false,
+      "details": {
+        "duration": "2 часа",
+        "persons": "2 персоны",
+        "includes": [
+          "Бокал шампанского",
+          "3 блюда на выбор",
+          "Десерт для двоих",
+          "Живая музыка"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "title": "Бизнес-ланч",
+      "description": "Изысканный обед в деловой атмосфере",
+      "image": "/images/offers/business-lunch.jpg",
+      "price": 3500,
+      "endDate": "2024-03-31",
+      "isSeasonSpecial": false,
+      "details": {
+        "duration": "1 час",
+        "persons": "1 персона",
+        "includes": [
+          "Салат на выбор",
+          "Суп дня",
+          "Горячее блюдо",
+          "Напиток"
+        ],
+        "available": "Пн-Пт, 12:00-16:00"
+      }
+    },
+    {
+      "id": 4,
+      "title": "Винный вечер",
+      "description": "Дегустация премиальных вин с сомелье",
+      "image": "/images/offers/wine-tasting.jpg",
+      "price": 6500,
+      "oldPrice": 8000,
+      "endDate": "2024-02-20",
+      "isSeasonSpecial": true,
+      "details": {
+        "duration": "2.5 часа",
+        "persons": "от 4 персон",
+        "includes": [
+          "5 сортов вина",
+          "Сырная тарелка",
+          "Мастер-класс от сомелье",
+          "Дегустационные заметки"
+        ]
+      }
+    }
+  ]
+} 

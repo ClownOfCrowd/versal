@@ -1,0 +1,214 @@
+{
+  "analytics_system": {
+    "name": "VersalAnalytics",
+    "version": "1.0",
+    "description": "Комплексная система аналитики и мониторинга для блога ресторана Versal",
+    "components": {
+      "content_analytics": {
+        "metrics": {
+          "performance": {
+            "views": {
+              "total": "Общее количество просмотров",
+              "unique": "Уникальные посетители",
+              "returning": "Возвращающиеся читатели"
+            },
+            "engagement": {
+              "time_on_page": "Среднее время на странице",
+              "scroll_depth": "Глубина прокрутки",
+              "bounce_rate": "Показатель отказов"
+            },
+            "interactions": {
+              "comments": "Количество комментариев",
+              "shares": "Количество репостов",
+              "saves": "Сохранения рецептов"
+            }
+          },
+          "content_quality": {
+            "readability": {
+              "score": "Оценка читабельности текста",
+              "complexity": "Уровень сложности",
+              "structure": "Качество структуры"
+            },
+            "user_feedback": {
+              "ratings": "Оценки пользователей",
+              "comments_sentiment": "Анализ тональности комментариев",
+              "recipe_success_rate": "Успешность приготовления по рецепту"
+            }
+          }
+        },
+        "reports": {
+          "automated": {
+            "daily": [
+              "Основные метрики производительности",
+              "Новые комментарии и отзывы",
+              "Аномалии в поведении пользователей"
+            ],
+            "weekly": [
+              "Анализ популярных тем",
+              "Эффективность контент-стратегии",
+              "Рекомендации по оптимизации"
+            ],
+            "monthly": [
+              "Подробный анализ контента",
+              "Тренды и прогнозы",
+              "ROI контент-маркетинга"
+            ]
+          },
+          "custom": {
+            "content_audit": "Глубокий анализ всего контента",
+            "user_behavior": "Анализ пользовательских путей",
+            "conversion_analysis": "Анализ конверсий"
+          }
+        }
+      },
+      "user_analytics": {
+        "profiles": {
+          "segmentation": {
+            "demographic": [
+              "Возраст",
+              "Пол",
+              "Местоположение"
+            ],
+            "behavioral": [
+              "Предпочтения в контенте",
+              "Частота посещений",
+              "Паттерны взаимодействия"
+            ],
+            "preferences": [
+              "Любимые рецепты",
+              "Предпочитаемые вина",
+              "Диетические ограничения"
+            ]
+          },
+          "journey_mapping": {
+            "touchpoints": [
+              "Первое посещение",
+              "Регистрация",
+              "Комментирование",
+              "Бронирование"
+            ],
+            "conversion_paths": {
+              "tracking": "Отслеживание путей к конверсии",
+              "optimization": "Оптимизация воронки"
+            }
+          }
+        },
+        "engagement": {
+          "metrics": {
+            "activity": {
+              "frequency": "Частота посещений",
+              "recency": "Давность последнего визита",
+              "duration": "Длительность сессий"
+            },
+            "interaction": {
+              "comments": "Активность в комментариях",
+              "ratings": "Частота оценок",
+              "shares": "Социальные шеры"
+            }
+          },
+          "gamification": {
+            "tracking": {
+              "points": "Система начисления баллов",
+              "achievements": "Прогресс достижений",
+              "rewards": "Полученные награды"
+            },
+            "effectiveness": {
+              "engagement_boost": "Влияние на вовлеченность",
+              "retention_impact": "Влияние на удержание"
+            }
+          }
+        }
+      },
+      "business_impact": {
+        "conversion_tracking": {
+          "primary": {
+            "reservations": {
+              "source": "Источник бронирования",
+              "value": "Средний чек",
+              "retention": "Повторные визиты"
+            },
+            "special_events": {
+              "registrations": "Записи на мероприятия",
+              "attendance": "Процент посещаемости",
+              "feedback": "Отзывы участников"
+            }
+          },
+          "secondary": {
+            "newsletter_signups": "Подписки на рассылку",
+            "recipe_downloads": "Загрузки рецептов",
+            "wine_recommendations": "Заказы рекомендованных вин"
+          }
+        },
+        "roi_analysis": {
+          "content_investment": {
+            "creation_costs": "Затраты на создание контента",
+            "promotion_costs": "Затраты на продвижение",
+            "maintenance_costs": "Затраты на поддержку"
+          },
+          "revenue_impact": {
+            "direct": "Прямые конверсии",
+            "indirect": "Влияние на узнаваемость бренда",
+            "lifetime_value": "Увеличение LTV клиентов"
+          }
+        }
+      },
+      "technical_performance": {
+        "monitoring": {
+          "site_speed": {
+            "page_load": "Время загрузки страниц",
+            "image_optimization": "Эффективность оптимизации изображений",
+            "server_response": "Время ответа сервера"
+          },
+          "availability": {
+            "uptime": "Процент доступности",
+            "error_rates": "Частота ошибок",
+            "response_codes": "Мониторинг HTTP-кодов"
+          }
+        },
+        "optimization": {
+          "caching": "Эффективность кэширования",
+          "cdn_usage": "Использование CDN",
+          "database_performance": "Производительность базы данных"
+        }
+      }
+    },
+    "integrations": {
+      "external_tools": {
+        "analytics": [
+          {
+            "name": "Google Analytics 4",
+            "metrics": ["поведение", "конверсии", "аудитория"]
+          },
+          {
+            "name": "Yandex.Metrika",
+            "metrics": ["вебвизор", "карты скроллинга", "формы"]
+          }
+        ],
+        "marketing": [
+          {
+            "name": "SendPulse",
+            "features": ["email-рассылки", "push-уведомления"]
+          },
+          {
+            "name": "Facebook Pixel",
+            "features": ["ретаргетинг", "конверсии"]
+          }
+        ]
+      },
+      "internal_systems": {
+        "crm": "Интеграция с CRM ресторана",
+        "booking": "Система бронирования",
+        "inventory": "Система учёта"
+      }
+    }
+  },
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2024-01-29",
+    "responsible": {
+      "analytics_lead": "Елена Петрова",
+      "technical_lead": "Игорь Сидоров",
+      "contact": "analytics@versal-restaurant.ru"
+    }
+  }
+} 

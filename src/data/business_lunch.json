@@ -1,0 +1,137 @@
+{
+  "restaurant_name": "Versal",
+  "business_lunch": {
+    "title": "Бизнес-ланч",
+    "description": "Изысканный обед в лучших традициях французской кухни",
+    "schedule": {
+      "days": "Понедельник - Пятница",
+      "hours": "12:00 - 16:00",
+      "last_order": "15:30"
+    },
+    "price": {
+      "two_courses": 2500,
+      "three_courses": 3200,
+      "includes": [
+        "Хлебная корзина с домашним маслом",
+        "Вода (газированная/негазированная)",
+        "Чай/кофе"
+      ]
+    },
+    "weekly_rotation": true,
+    "menus": [
+      {
+        "week": 1,
+        "dates": "29 января - 2 февраля",
+        "starters": {
+          "title": "Закуски (на выбор)",
+          "items": [
+            {
+              "id": "pate",
+              "name": "Паштет из куриной печени",
+              "description": "С луковым конфитюром и тостами",
+              "weight": 120,
+              "allergens": ["глютен", "лактоза"]
+            },
+            {
+              "id": "salad_nicoise",
+              "name": "Салат Нисуаз",
+              "description": "С тунцом, яйцом пашот и анчоусной заправкой",
+              "weight": 180,
+              "allergens": ["рыба", "яйца"]
+            },
+            {
+              "id": "soup_day",
+              "name": "Суп дня",
+              "description": "Крем-суп из тыквы с трюфельным маслом",
+              "weight": 300,
+              "allergens": ["лактоза"]
+            }
+          ]
+        },
+        "main_courses": {
+          "title": "Основные блюда (на выбор)",
+          "items": [
+            {
+              "id": "fish_day",
+              "name": "Рыба дня",
+              "description": "Филе сибаса с соусом белое вино и сезонными овощами",
+              "weight": 280,
+              "allergens": ["рыба", "лактоза"]
+            },
+            {
+              "id": "chicken_supreme",
+              "name": "Куриное супрем",
+              "description": "С картофельным пюре и соусом из белых грибов",
+              "weight": 300,
+              "allergens": ["лактоза"]
+            },
+            {
+              "id": "risotto_mushroom",
+              "name": "Грибное ризотто",
+              "description": "С пармезаном и трюфельным маслом",
+              "weight": 320,
+              "allergens": ["лактоза"],
+              "vegetarian": true
+            }
+          ]
+        },
+        "desserts": {
+          "title": "Десерты (на выбор)",
+          "items": [
+            {
+              "id": "creme_caramel",
+              "name": "Крем-карамель",
+              "description": "Классический французский десерт с карамельным соусом",
+              "weight": 150,
+              "allergens": ["яйца", "лактоза"]
+            },
+            {
+              "id": "tarte_poire",
+              "name": "Грушевый тарт",
+              "description": "С миндальным кремом и ванильным мороженым",
+              "weight": 160,
+              "allergens": ["глютен", "лактоза", "орехи"]
+            },
+            {
+              "id": "sorbet_day",
+              "name": "Сорбет дня",
+              "description": "Два шарика домашнего сорбета",
+              "weight": 120,
+              "allergens": []
+            }
+          ]
+        }
+      }
+    ],
+    "additional_options": {
+      "wine_pairing": {
+        "price": 1500,
+        "description": "Бокал вина, подобранный сомелье к вашему блюду"
+      },
+      "coffee_options": {
+        "espresso": "Включено",
+        "cappuccino": "+150 руб",
+        "latte": "+200 руб"
+      }
+    },
+    "conditions": [
+      "Меню обновляется еженедельно",
+      "Не суммируется с другими акциями и скидками",
+      "Для компаний от 6 человек рекомендуется предварительное бронирование"
+    ]
+  },
+  "metadata": {
+    "last_updated": "2024-01-29",
+    "currency": "RUB",
+    "prices_include_vat": true,
+    "contact_for_groups": {
+      "phone": "+7 (495) 123-45-67",
+      "email": "business@versal-restaurant.ru"
+    },
+    "special_requests": {
+      "notice": "Если у вас есть особые диетические требования или аллергии, пожалуйста, сообщите об этом официанту",
+      "vegetarian_options": "Доступны вегетарианские опции",
+      "gluten_free": "Возможна адаптация некоторых блюд без глютена"
+    }
+  }
+} 

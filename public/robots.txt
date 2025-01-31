@@ -1,0 +1,13 @@
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://luxury-restaurant.ru/sitemap.xml
+
+# Disallow admin and api routes
+Disallow: /api/*
+Disallow: /admin/*
+
+# Host
+Host: https://luxury-restaurant.ru 

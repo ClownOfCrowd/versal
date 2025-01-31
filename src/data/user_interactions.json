@@ -1,0 +1,213 @@
+{
+  "user_interactions": {
+    "recipe_interactions": {
+      "post_id": "recipe-002",
+      "comments": [
+        {
+          "id": "comment-001",
+          "user": {
+            "name": "Анна М.",
+            "type": "verified_user",
+            "badges": ["Гурман", "Постоянный гость"]
+          },
+          "content": "Приготовила этот тартар на выходных - потрясающее сочетание вкусов! Особенно впечатлил трюфельный крем. Единственное, я использовала обычное оливковое масло вместо трюфельного, но всё равно получилось очень вкусно.",
+          "rating": 5,
+          "date": "2024-01-30",
+          "likes": 12,
+          "has_photos": true,
+          "photos": [
+            {
+              "url": "/images/user_content/recipe-002/anna_m_result.jpg",
+              "description": "Мой вариант тартара"
+            }
+          ]
+        },
+        {
+          "id": "comment-002",
+          "user": {
+            "name": "Михаил К.",
+            "type": "cooking_enthusiast",
+            "badges": ["Начинающий повар"]
+          },
+          "content": "Подскажите, пожалуйста, можно ли заменить авокадо на что-то другое? У меня аллергия.",
+          "date": "2024-01-30",
+          "likes": 3,
+          "has_expert_response": true,
+          "expert_response": {
+            "author": "Шеф Андрей Петров",
+            "content": "Можно заменить на молодой зелёный горошек или пюре из зелёного горошка. Текстура будет немного другой, но вкусовой баланс сохранится.",
+            "date": "2024-01-30"
+          }
+        }
+      ],
+      "recipe_attempts": {
+        "total": 23,
+        "success_rate": 4.5,
+        "common_questions": [
+          {
+            "question": "Как долго хранится трюфельный крем?",
+            "answer": "Трюфельный крем можно хранить в герметичном контейнере до 24 часов при температуре 2-4°C."
+          }
+        ],
+        "modifications": [
+          {
+            "user": "Елена В.",
+            "modification": "Добавила обжаренные кедровые орехи для хруста",
+            "rating": 5,
+            "approved_by_chef": true
+          }
+        ]
+      },
+      "analytics": {
+        "views": 1250,
+        "saves": 89,
+        "shares": 45,
+        "print_requests": 34,
+        "ingredient_conversions": 56
+      }
+    },
+    "wine_article_interactions": {
+      "post_id": "wine-002",
+      "comments": [
+        {
+          "id": "comment-003",
+          "user": {
+            "name": "Дмитрий Л.",
+            "type": "wine_enthusiast",
+            "badges": ["Сомелье-любитель"]
+          },
+          "content": "Отличная статья! Особенно полезен раздел про температуру подачи. Хотелось бы узнать больше про различия между винтажными и невинтажными шампанскими.",
+          "rating": 5,
+          "date": "2024-01-30",
+          "likes": 18,
+          "expert_response": {
+            "author": "Дмитрий Соколов, шеф-сомелье",
+            "content": "Спасибо за интерес! Планируем отдельную статью про винтажные шампанские. Если кратко: винтажные производятся только в исключительные годы и только из винограда одного урожая, тогда как невинтажные - это искусство ассамбляжа вин разных лет.",
+            "date": "2024-01-30"
+          }
+        }
+      ],
+      "expert_qa_session": {
+        "date": "2024-02-01",
+        "expert": "Дмитрий Соколов",
+        "questions": [
+          {
+            "user": "Мария С.",
+            "question": "Как правильно хранить открытую бутылку шампанского?",
+            "answer": "Используйте специальную пробку для игристых вин и храните бутылку в холодильнике. Желательно употребить в течение 24-48 часов после открытия для сохранения вкуса и игристости."
+          }
+        ],
+        "total_participants": 45
+      },
+      "analytics": {
+        "views": 2300,
+        "average_time_spent": "8.5 минут",
+        "social_shares": 156,
+        "wine_reservations": 12
+      }
+    },
+    "event_interactions": {
+      "post_id": "event-001",
+      "registrations": {
+        "total": 28,
+        "waiting_list": 5,
+        "analytics": {
+          "conversion_rate": "68%",
+          "average_group_size": 2.4,
+          "preferred_dates": {
+            "2024-03-15": 8,
+            "2024-03-16": 12,
+            "2024-03-17": 8
+          }
+        }
+      },
+      "comments": [
+        {
+          "id": "comment-004",
+          "user": {
+            "name": "Ирина К.",
+            "type": "verified_user",
+            "badges": ["VIP-гость"]
+          },
+          "content": "Уже забронировала столик на 16 марта! С нетерпением жду встречи с шефом Моро, его ресторан в Провансе - это что-то невероятное!",
+          "date": "2024-01-30",
+          "likes": 23
+        }
+      ],
+      "social_media_engagement": {
+        "instagram_shares": 89,
+        "facebook_responses": 145,
+        "whatsapp_shares": 67
+      },
+      "reminder_subscriptions": {
+        "email": 156,
+        "sms": 89,
+        "calendar": 112
+      }
+    },
+    "gamification_stats": {
+      "badges_awarded": {
+        "total": 45,
+        "distribution": {
+          "Гурман": 15,
+          "Сомелье": 8,
+          "Шеф-повар": 22
+        }
+      },
+      "points_awarded": {
+        "total": 1250,
+        "categories": {
+          "comments": 450,
+          "reviews": 350,
+          "recipe_attempts": 450
+        }
+      },
+      "achievements_unlocked": {
+        "total": 67,
+        "top_achievements": [
+          {
+            "name": "Мастер рецептов",
+            "description": "Успешно приготовил 5 блюд",
+            "users_achieved": 12
+          },
+          {
+            "name": "Винный эксперт",
+            "description": "Оставил 10 отзывов о винах",
+            "users_achieved": 8
+          }
+        ]
+      }
+    },
+    "personalization_data": {
+      "user_segments": {
+        "active_cooks": {
+          "size": 250,
+          "average_engagement": "8.5 взаимодействий/неделю",
+          "preferred_content": ["рецепты", "кулинарные советы"]
+        },
+        "wine_enthusiasts": {
+          "size": 180,
+          "average_engagement": "6.2 взаимодействий/неделю",
+          "preferred_content": ["винные обзоры", "дегустации"]
+        },
+        "event_goers": {
+          "size": 320,
+          "average_engagement": "4.8 взаимодействий/неделю",
+          "preferred_content": ["анонсы событий", "фотоотчеты"]
+        }
+      },
+      "content_recommendations": {
+        "algorithm_performance": {
+          "accuracy": "87%",
+          "engagement_rate": "62%",
+          "personalization_score": "8.4/10"
+        }
+      }
+    }
+  },
+  "metadata": {
+    "last_updated": "2024-01-30",
+    "analytics_period": "30 дней",
+    "data_source": "VersalAnalytics"
+  }
+} 

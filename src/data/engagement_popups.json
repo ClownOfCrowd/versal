@@ -1,0 +1,242 @@
+{
+  "engagement_popups": {
+    "inactivity_form": {
+      "trigger": {
+        "type": "inactivity",
+        "timeout": 30,
+        "scroll_stop": true,
+        "conditions": {
+          "min_page_scroll": "20%",
+          "excluded_pages": ["контакты", "бронирование"],
+          "show_frequency": "once_per_session",
+          "mobile_timeout": 45
+        }
+      },
+      "appearance": {
+        "animation": "fade",
+        "duration": 500,
+        "overlay": {
+          "background": "rgba(0, 0, 0, 0.7)",
+          "blur": "3px"
+        }
+      },
+      "content_variants": [
+        {
+          "id": "menu_viewer",
+          "trigger_pages": ["меню", "рецепты", "блог"],
+          "headlines": [
+            {
+              "text": "Засмотрелись на наше меню? Лучше приходите к нам, вживую это всё выглядит ещё аппетитнее!",
+              "weight": 0.4
+            },
+            {
+              "text": "Кажется, вы нашли что-то интересное! Позвольте зарезервировать для вас столик и приготовить это блюдо?",
+              "weight": 0.3
+            },
+            {
+              "text": "Фотографии хороши, но аромат и вкус наших блюд ещё лучше. Забронируйте столик прямо сейчас!",
+              "weight": 0.3
+            }
+          ]
+        },
+        {
+          "id": "wine_viewer",
+          "trigger_pages": ["вина", "винная-карта"],
+          "headlines": [
+            {
+              "text": "Интересуетесь нашей винной картой? Наш сомелье будет рад помочь с выбором лично!",
+              "weight": 0.4
+            },
+            {
+              "text": "Подберём идеальное вино к вашему ужину? Забронируйте столик с консультацией сомелье",
+              "weight": 0.3
+            },
+            {
+              "text": "Откройте для себя изысканный мир вин вместе с нашим сомелье. Забронируйте дегустацию!",
+              "weight": 0.3
+            }
+          ]
+        },
+        {
+          "id": "events_viewer",
+          "trigger_pages": ["события", "фестивали"],
+          "headlines": [
+            {
+              "text": "Не пропустите уникальное гастрономическое событие! Забронируйте места прямо сейчас",
+              "weight": 0.4
+            },
+            {
+              "text": "Хотите стать частью этого события? Мы сохраним для вас лучшие места!",
+              "weight": 0.3
+            },
+            {
+              "text": "Осталось всего несколько мест! Позвольте включить вас в список гостей?",
+              "weight": 0.3
+            }
+          ]
+        }
+      ],
+      "form": {
+        "title": "Бронирование столика",
+        "fields": [
+          {
+            "type": "text",
+            "name": "name",
+            "label": "Ваше имя",
+            "placeholder": "Представьтесь, пожалуйста",
+            "required": true
+          },
+          {
+            "type": "tel",
+            "name": "phone",
+            "label": "Телефон",
+            "placeholder": "+7 (___) ___-__-__",
+            "required": true,
+            "validation": "phone"
+          },
+          {
+            "type": "date",
+            "name": "date",
+            "label": "Дата",
+            "min": "today",
+            "max": "+30d",
+            "required": true
+          },
+          {
+            "type": "time",
+            "name": "time",
+            "label": "Время",
+            "min": "12:00",
+            "max": "23:00",
+            "step": "30m",
+            "required": true
+          },
+          {
+            "type": "number",
+            "name": "guests",
+            "label": "Количество гостей",
+            "min": 1,
+            "max": 20,
+            "required": true
+          },
+          {
+            "type": "textarea",
+            "name": "comments",
+            "label": "Особые пожелания",
+            "placeholder": "Например, предпочтения по расположению столика или диетические ограничения",
+            "required": false
+          }
+        ],
+        "buttons": {
+          "submit": {
+            "text": "Забронировать столик",
+            "style": {
+              "background": "#9C7C38",
+              "color": "#FFFFFF",
+              "hover": {
+                "background": "#825E1D"
+              }
+            }
+          },
+          "call": {
+            "text": "Позвонить в ресторан",
+            "phone": "+7 (495) 123-45-67",
+            "style": {
+              "background": "transparent",
+              "color": "#9C7C38",
+              "border": "1px solid #9C7C38",
+              "hover": {
+                "background": "#9C7C38",
+                "color": "#FFFFFF"
+              }
+            }
+          }
+        }
+      },
+      "success_message": {
+        "title": "Спасибо за ваш интерес!",
+        "text": "Мы свяжемся с вами в течение 15 минут для подтверждения бронирования.",
+        "additional_info": "Если у вас срочный вопрос, пожалуйста, позвоните нам: +7 (495) 123-45-67"
+      }
+    },
+    "quick_actions": {
+      "floating_button": {
+        "enabled": true,
+        "position": "bottom-right",
+        "icon": "restaurant",
+        "text": "Забронировать",
+        "mobile_text": "Бронь",
+        "actions": [
+          {
+            "type": "booking",
+            "icon": "calendar",
+            "text": "Забронировать столик"
+          },
+          {
+            "type": "call",
+            "icon": "phone",
+            "text": "Позвонить"
+          },
+          {
+            "type": "whatsapp",
+            "icon": "whatsapp",
+            "text": "WhatsApp"
+          }
+        ]
+      }
+    },
+    "personalization": {
+      "returning_visitor": {
+        "greeting": "С возвращением!",
+        "show_last_viewed": true,
+        "remember_preferences": true
+      },
+      "time_based": {
+        "morning": {
+          "start": "09:00",
+          "end": "12:00",
+          "message": "Планируете бизнес-ланч?"
+        },
+        "afternoon": {
+          "start": "12:00",
+          "end": "16:00",
+          "message": "Присоединяйтесь к нам на обед!"
+        },
+        "evening": {
+          "start": "16:00",
+          "end": "23:00",
+          "message": "Идеальное время для ужина!"
+        }
+      }
+    },
+    "analytics": {
+      "track_events": [
+        "popup_show",
+        "popup_interact",
+        "form_start",
+        "form_submit",
+        "call_click",
+        "close_click"
+      ],
+      "conversion_goals": {
+        "booking_completed": {
+          "value": 1,
+          "category": "Conversion"
+        },
+        "call_initiated": {
+          "value": 0.5,
+          "category": "Engagement"
+        }
+      }
+    }
+  },
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2024-01-30",
+    "responsible": {
+      "ux_designer": "Анна Смирнова",
+      "developer": "Павел Иванов",
+      "contact": "development@versal-restaurant.ru"
+    }
+  }
+} 

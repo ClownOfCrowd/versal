@@ -1,0 +1,246 @@
+{
+  "popup_styles": {
+    "theme": {
+      "colors": {
+        "primary": "#9C7C38",
+        "secondary": "#2C2C2C",
+        "accent": "#D4AF37",
+        "background": {
+          "light": "#FFFFFF",
+          "dark": "#1A1A1A"
+        },
+        "text": {
+          "primary": "#2C2C2C",
+          "secondary": "#666666",
+          "light": "#FFFFFF"
+        },
+        "borders": {
+          "primary": "#9C7C38",
+          "secondary": "#E5E5E5"
+        },
+        "success": "#4CAF50",
+        "error": "#F44336"
+      },
+      "typography": {
+        "fonts": {
+          "primary": "Cormorant Garamond",
+          "secondary": "Montserrat",
+          "accent": "Playfair Display"
+        },
+        "sizes": {
+          "headline": {
+            "desktop": "32px",
+            "tablet": "28px",
+            "mobile": "24px"
+          },
+          "title": {
+            "desktop": "24px",
+            "tablet": "20px",
+            "mobile": "18px"
+          },
+          "body": {
+            "desktop": "16px",
+            "tablet": "15px",
+            "mobile": "14px"
+          },
+          "caption": {
+            "desktop": "14px",
+            "tablet": "13px",
+            "mobile": "12px"
+          }
+        },
+        "weights": {
+          "light": 300,
+          "regular": 400,
+          "medium": 500,
+          "semibold": 600,
+          "bold": 700
+        }
+      }
+    },
+    "modal": {
+      "container": {
+        "width": {
+          "desktop": "600px",
+          "tablet": "80%",
+          "mobile": "90%"
+        },
+        "max_height": {
+          "desktop": "90vh",
+          "tablet": "90vh",
+          "mobile": "95vh"
+        },
+        "background": "#FFFFFF",
+        "border_radius": "8px",
+        "box_shadow": "0 4px 20px rgba(0, 0, 0, 0.15)",
+        "padding": {
+          "desktop": "40px",
+          "tablet": "30px",
+          "mobile": "20px"
+        }
+      },
+      "header": {
+        "margin_bottom": "30px",
+        "headline": {
+          "font_family": "Playfair Display",
+          "color": "#2C2C2C",
+          "line_height": 1.3,
+          "margin_bottom": "15px",
+          "text_align": "center"
+        },
+        "description": {
+          "font_family": "Montserrat",
+          "color": "#666666",
+          "line_height": 1.6,
+          "margin_bottom": "20px",
+          "text_align": "center"
+        }
+      },
+      "form": {
+        "layout": {
+          "gap": "20px",
+          "field_margin_bottom": "15px"
+        },
+        "fields": {
+          "label": {
+            "font_family": "Montserrat",
+            "color": "#2C2C2C",
+            "font_size": "14px",
+            "font_weight": 500,
+            "margin_bottom": "5px"
+          },
+          "input": {
+            "height": "48px",
+            "padding": "0 15px",
+            "border": "1px solid #E5E5E5",
+            "border_radius": "4px",
+            "font_family": "Montserrat",
+            "font_size": "15px",
+            "color": "#2C2C2C",
+            "background": "#FFFFFF",
+            "transition": "all 0.3s ease",
+            "placeholder": {
+              "color": "#999999"
+            },
+            "focus": {
+              "border_color": "#9C7C38",
+              "box_shadow": "0 0 0 3px rgba(156, 124, 56, 0.1)"
+            },
+            "error": {
+              "border_color": "#F44336",
+              "box_shadow": "0 0 0 3px rgba(244, 67, 54, 0.1)"
+            }
+          },
+          "textarea": {
+            "min_height": "100px",
+            "padding": "15px",
+            "resize": "vertical"
+          }
+        },
+        "buttons": {
+          "container": {
+            "display": "flex",
+            "gap": "15px",
+            "margin_top": "30px"
+          },
+          "base": {
+            "height": "48px",
+            "padding": "0 30px",
+            "border_radius": "4px",
+            "font_family": "Montserrat",
+            "font_size": "15px",
+            "font_weight": 600,
+            "text_transform": "uppercase",
+            "letter_spacing": "0.5px",
+            "transition": "all 0.3s ease",
+            "cursor": "pointer"
+          }
+        }
+      }
+    },
+    "animations": {
+      "overlay": {
+        "enter": {
+          "opacity": [0, 1],
+          "duration": 300,
+          "timing": "ease-out"
+        },
+        "exit": {
+          "opacity": [1, 0],
+          "duration": 200,
+          "timing": "ease-in"
+        }
+      },
+      "modal": {
+        "enter": {
+          "transform": ["scale(0.95)", "scale(1)"],
+          "opacity": [0, 1],
+          "duration": 300,
+          "timing": "ease-out"
+        },
+        "exit": {
+          "transform": ["scale(1)", "scale(0.95)"],
+          "opacity": [1, 0],
+          "duration": 200,
+          "timing": "ease-in"
+        }
+      },
+      "fields": {
+        "enter": {
+          "transform": ["translateY(10px)", "translateY(0)"],
+          "opacity": [0, 1],
+          "duration": 200,
+          "delay": "index * 50",
+          "timing": "ease-out"
+        }
+      }
+    },
+    "responsive": {
+      "breakpoints": {
+        "mobile": "320px",
+        "tablet": "768px",
+        "desktop": "1024px",
+        "large": "1440px"
+      },
+      "layouts": {
+        "mobile": {
+          "stack_buttons": true,
+          "full_width_buttons": true,
+          "reduced_padding": true
+        },
+        "tablet": {
+          "stack_buttons": false,
+          "full_width_buttons": false,
+          "reduced_padding": false
+        }
+      }
+    },
+    "accessibility": {
+      "focus_outline": {
+        "color": "#9C7C38",
+        "width": "3px",
+        "style": "solid"
+      },
+      "aria_labels": {
+        "modal": "Форма бронирования столика",
+        "close_button": "Закрыть форму",
+        "submit_button": "Отправить форму бронирования",
+        "call_button": "Позвонить в ресторан"
+      },
+      "keyboard_navigation": {
+        "tab_index": true,
+        "escape_to_close": true,
+        "enter_to_submit": true
+      }
+    }
+  },
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2024-01-30",
+    "responsible": {
+      "ui_designer": "Мария Козлова",
+      "frontend_developer": "Алексей Петров",
+      "contact": "design@versal-restaurant.ru"
+    }
+  }
+} 

@@ -1,0 +1,58 @@
+{
+  "awards": [
+    {
+      "id": 1,
+      "title": "Две звезды Мишлен",
+      "description": "Высшая награда от самого престижного ресторанного гида в мире за выдающиеся кулинарные достижения и безупречный сервис",
+      "image": "/images/awards/michelin.jpg",
+      "year": 2023,
+      "issuer": "Michelin Guide",
+      "category": "Кулинарное мастерство"
+    },
+    {
+      "id": 2,
+      "title": "Лучший ресторан года",
+      "description": "Признание исключительного вклада в развитие высокой кухни и инновационного подхода к гастрономии",
+      "image": "/images/awards/restaurant-of-the-year.jpg",
+      "year": 2023,
+      "issuer": "World Restaurant Awards",
+      "category": "Ресторанный бизнес"
+    },
+    {
+      "id": 3,
+      "title": "Золотой бокал",
+      "description": "Награда за лучшую винную карту и исключительный подход к подбору вин",
+      "image": "/images/awards/wine-excellence.jpg",
+      "year": 2023,
+      "issuer": "Wine Spectator",
+      "category": "Винная карта"
+    },
+    {
+      "id": 4,
+      "title": "Лучший сервис",
+      "description": "Признание высочайшего уровня обслуживания и внимания к каждому гостю",
+      "image": "/images/awards/service-excellence.jpg",
+      "year": 2022,
+      "issuer": "Forbes Travel Guide",
+      "category": "Сервис"
+    },
+    {
+      "id": 5,
+      "title": "Инновации в гастрономии",
+      "description": "Награда за креативный подход и инновационные техники в приготовлении блюд",
+      "image": "/images/awards/innovation.jpg",
+      "year": 2022,
+      "issuer": "International Culinary Academy",
+      "category": "Инновации"
+    },
+    {
+      "id": 6,
+      "title": "Выбор гурманов",
+      "description": "Признание от сообщества ценителей высокой кухни за исключительное качество блюд",
+      "image": "/images/awards/gourmet-choice.jpg",
+      "year": 2023,
+      "issuer": "Gourmet Association",
+      "category": "Признание публики"
+    }
+  ]
+} 

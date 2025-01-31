@@ -1,0 +1,252 @@
+{
+  "restaurant_name": "Versal",
+  "introduction": {
+    "title": "Винная карта",
+    "description": "Изысканная коллекция вин, тщательно отобранная нашим шеф-сомелье Дмитрием Соколовым. Особое внимание уделено винам Франции, представляющим все значимые регионы и аппелласьоны.",
+    "sommelier_note": "Наша винная карта – это путешествие по лучшим винодельческим регионам Франции и мира. Мы готовы помочь вам с выбором идеального вина для любого случая."
+  },
+  "by_glass": {
+    "title": "Вина по бокалам",
+    "description": "Избранные вина, доступные по бокалам",
+    "categories": {
+      "champagne": {
+        "title": "Шампанское",
+        "items": [
+          {
+            "name": "Ruinart Blanc de Blancs",
+            "region": "Шампань",
+            "year": "NV",
+            "price": 3200,
+            "volume": 125,
+            "description": "Элегантное шампанское с нотами цитрусовых и белых цветов"
+          },
+          {
+            "name": "Dom Pérignon Vintage",
+            "region": "Шампань",
+            "year": "2012",
+            "price": 5500,
+            "volume": 125,
+            "description": "Престижное шампанское с комплексным букетом и длительным послевкусием"
+          }
+        ]
+      },
+      "white": {
+        "title": "Белые вина",
+        "items": [
+          {
+            "name": "Chablis Premier Cru 'Montée de Tonnerre', William Fèvre",
+            "region": "Бургундия",
+            "year": "2020",
+            "price": 2800,
+            "volume": 150,
+            "description": "Минеральное вино с ароматами белых фруктов и цветов"
+          },
+          {
+            "name": "Puligny-Montrachet, Louis Jadot",
+            "region": "Бургундия",
+            "year": "2019",
+            "price": 3500,
+            "volume": 150,
+            "description": "Комплексное белое бургундское с нотами дуба и экзотических фруктов"
+          }
+        ]
+      },
+      "red": {
+        "title": "Красные вина",
+        "items": [
+          {
+            "name": "Château Lynch-Bages",
+            "region": "Бордо",
+            "year": "2015",
+            "price": 4200,
+            "volume": 150,
+            "description": "Мощное бордо с ароматами черных ягод и специй"
+          },
+          {
+            "name": "Gevrey-Chambertin, Domaine Harmand-Geoffroy",
+            "region": "Бургундия",
+            "year": "2018",
+            "price": 3800,
+            "volume": 150,
+            "description": "Элегантное красное бургундское с ароматами вишни и подлеска"
+          }
+        ]
+      }
+    }
+  },
+  "by_bottle": {
+    "title": "Вина по бутылкам",
+    "categories": {
+      "champagne": {
+        "title": "Шампанское и игристые вина",
+        "items": [
+          {
+            "name": "Krug Grande Cuvée",
+            "region": "Шампань",
+            "year": "NV",
+            "price": 75000,
+            "volume": 750,
+            "description": "Престижное шампанское с богатым букетом и исключительной сложностью",
+            "rating": {
+              "parker": 97,
+              "wine_spectator": 96
+            }
+          },
+          {
+            "name": "Salon Blanc de Blancs",
+            "region": "Шампань",
+            "year": "2008",
+            "price": 120000,
+            "volume": 750,
+            "description": "Легендарное шампанское, производимое только в исключительные годы",
+            "rating": {
+              "parker": 100,
+              "wine_spectator": 99
+            }
+          }
+        ]
+      },
+      "white_burgundy": {
+        "title": "Белые вина Бургундии",
+        "items": [
+          {
+            "name": "Montrachet Grand Cru, Domaine de la Romanée-Conti",
+            "region": "Бургундия",
+            "year": "2018",
+            "price": 350000,
+            "volume": 750,
+            "description": "Величайшее белое вино мира с непревзойденной сложностью и элегантностью",
+            "rating": {
+              "parker": 100,
+              "wine_spectator": 99
+            }
+          },
+          {
+            "name": "Corton-Charlemagne Grand Cru, Louis Latour",
+            "region": "Бургундия",
+            "year": "2019",
+            "price": 45000,
+            "volume": 750,
+            "description": "Мощное и комплексное белое бургундское с потенциалом выдержки",
+            "rating": {
+              "parker": 95,
+              "wine_spectator": 94
+            }
+          }
+        ]
+      },
+      "bordeaux": {
+        "title": "Бордо",
+        "items": [
+          {
+            "name": "Château Lafite Rothschild",
+            "region": "Бордо",
+            "year": "2010",
+            "price": 280000,
+            "volume": 750,
+            "description": "Первый Гран Крю Бордо с исключительной элегантностью и долголетием",
+            "rating": {
+              "parker": 98,
+              "wine_spectator": 97
+            }
+          },
+          {
+            "name": "Château Margaux",
+            "region": "Бордо",
+            "year": "2015",
+            "price": 250000,
+            "volume": 750,
+            "description": "Легендарное вино с ароматами черных фруктов, фиалок и специй",
+            "rating": {
+              "parker": 99,
+              "wine_spectator": 98
+            }
+          }
+        ]
+      },
+      "burgundy_red": {
+        "title": "Красные вина Бургундии",
+        "items": [
+          {
+            "name": "Romanée-Conti Grand Cru Monopole, DRC",
+            "region": "Бургундия",
+            "year": "2018",
+            "price": 850000,
+            "volume": 750,
+            "description": "Самое престижное красное вино мира с уникальным терруаром",
+            "rating": {
+              "parker": 100,
+              "wine_spectator": 100
+            }
+          },
+          {
+            "name": "Chambertin Grand Cru, Armand Rousseau",
+            "region": "Бургундия",
+            "year": "2017",
+            "price": 180000,
+            "volume": 750,
+            "description": "Великое красное бургундское с шелковистой текстурой",
+            "rating": {
+              "parker": 97,
+              "wine_spectator": 96
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rare_wines": {
+    "title": "Редкие вина",
+    "description": "Уникальная коллекция раритетных вин",
+    "items": [
+      {
+        "name": "Château Mouton Rothschild",
+        "region": "Бордо",
+        "year": "1982",
+        "price": 450000,
+        "volume": 750,
+        "description": "Легендарный винтаж от великого шато",
+        "rating": {
+          "parker": 100,
+          "wine_spectator": 98
+        },
+        "availability": 2
+      },
+      {
+        "name": "Henri Jayer Richebourg Grand Cru",
+        "region": "Бургундия",
+        "year": "1985",
+        "price": 1200000,
+        "volume": 750,
+        "description": "Исключительно редкое вино от легендарного винодела",
+        "rating": {
+          "parker": 100,
+          "wine_spectator": 99
+        },
+        "availability": 1
+      }
+    ]
+  },
+  "metadata": {
+    "last_updated": "2024-01-29",
+    "currency": "RUB",
+    "prices_include_vat": true,
+    "sommelier": {
+      "name": "Дмитрий Соколов",
+      "title": "Шеф-сомелье",
+      "certifications": [
+        "Court of Master Sommeliers Advanced Certificate",
+        "WSET Level 4 Diploma"
+      ]
+    },
+    "service": {
+      "temperature": {
+        "champagne": "6-8°C",
+        "white_wine": "8-12°C",
+        "red_wine": "16-18°C"
+      },
+      "glassware": "Riedel",
+      "decanting_available": true
+    }
+  }
+} 

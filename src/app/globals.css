@@ -3,19 +3,824 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
+  --accent-color: #E2B15B;
+  --accent-dark: #C89B3C;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  min-height: 100vh;
+  font-family: var(--font-lora);
+}
+
+.text-gradient {
+  background: linear-gradient(to right, #C5A47E, #5A0B0D);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+.btn-primary {
+  background: linear-gradient(to right, #5A0B0D, #C5A47E);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(197, 164, 126, 0.3);
+}
+
+.btn-outline {
+  border: 2px solid #C5A47E;
+  color: #C5A47E;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: #C5A47E;
+  color: #5A0B0D;
+  transform: translateY(-2px);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-dark text-white font-lora antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair;
+  }
+
+  input, select, textarea {
+    @apply bg-white/10 text-white px-4 py-2 rounded-lg 
+           focus:outline-none focus:ring-2 focus:ring-accent
+           placeholder:text-white/50 transition-all duration-300;
+  }
+
+  input:focus, select:focus, textarea:focus {
+    @apply bg-white/20;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-accent to-primary;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  .btn-primary {
+    @apply px-6 py-2 bg-accent text-white rounded-lg 
+           hover:bg-accent/90 transition-all duration-300
+           disabled:opacity-50 disabled:cursor-not-allowed
+           focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-dark
+           transform hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-2 bg-white/10 text-white rounded-lg 
+           hover:bg-white/20 transition-all duration-300
+           disabled:opacity-50 disabled:cursor-not-allowed
+           focus:outline-none focus:ring-2 focus:ring-white/20 focus:ring-offset-2 focus:ring-offset-dark
+           transform hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  .btn-outline {
+    @apply px-6 py-2 border border-accent text-accent rounded-lg 
+           hover:bg-accent hover:text-white transition-all duration-300
+           disabled:opacity-50 disabled:cursor-not-allowed
+           focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-dark
+           transform hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  .form-group {
+    @apply space-y-2;
+  }
+
+  .form-label {
+    @apply block text-sm font-medium text-gray-300;
+  }
+
+  .form-input {
+    @apply w-full bg-white/10 text-white px-4 py-2 rounded-lg
+           focus:outline-none focus:ring-2 focus:ring-accent
+           placeholder:text-white/50 transition-all duration-300;
+  }
+
+  .form-select {
+    @apply w-full bg-white/10 text-white px-4 py-2 rounded-lg
+           focus:outline-none focus:ring-2 focus:ring-accent
+           transition-all duration-300;
+  }
+
+  .form-textarea {
+    @apply w-full bg-white/10 text-white px-4 py-2 rounded-lg
+           focus:outline-none focus:ring-2 focus:ring-accent
+           placeholder:text-white/50 transition-all duration-300
+           resize-none;
+  }
+}
+
+/* Стили для DatePicker */
+.react-datepicker {
+  @apply bg-dark border border-white/10 rounded-lg !important;
+  animation: datepickerFadeIn 0.3s ease-out;
+}
+
+.react-datepicker__header {
+  @apply bg-white/5 border-b border-white/10 !important;
+}
+
+.react-datepicker__current-month,
+.react-datepicker__day-name {
+  @apply text-white !important;
+}
+
+.react-datepicker__day {
+  @apply text-white hover:bg-accent hover:text-white rounded-lg transition-all !important;
+  animation: datepickerDayFadeIn 0.3s ease-out backwards;
+}
+
+.react-datepicker__day--selected {
+  @apply bg-accent text-white scale-110 !important;
+  animation: datepickerDaySelected 0.3s ease-out;
+}
+
+.react-datepicker__day--disabled {
+  @apply text-white/20 hover:bg-transparent cursor-not-allowed !important;
+}
+
+.react-datepicker__navigation-icon::before {
+  @apply border-white/50 transition-colors !important;
+}
+
+.react-datepicker__navigation:hover .react-datepicker__navigation-icon::before {
+  @apply border-accent !important;
+}
+
+.react-datepicker__month-container {
+  @apply p-2;
+}
+
+.react-datepicker__day-names {
+  @apply mb-2;
+}
+
+.react-datepicker__day-name {
+  @apply text-white/50 text-sm;
+}
+
+.react-datepicker__current-month {
+  @apply text-lg mb-4 font-medium;
+}
+
+.react-datepicker__navigation {
+  @apply top-3;
+}
+
+.react-datepicker__navigation--previous {
+  @apply left-2;
+}
+
+.react-datepicker__navigation--next {
+  @apply right-2;
+}
+
+@keyframes datepickerFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes datepickerDayFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes datepickerDaySelected {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+/* Анимации */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Кастомный скроллбар */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-white/5;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-white/20 rounded-full hover:bg-white/30 transition-colors;
+}
+
+/* Стили для мобильных устройств */
+@media (max-width: 768px) {
+  .btn-primary,
+  .btn-secondary,
+  .btn-outline {
+    @apply w-full justify-center;
+  }
+
+  .react-datepicker {
+    @apply w-full !important;
+  }
+
+  .react-datepicker__month-container {
+    @apply w-full !important;
+  }
+
+  .react-datepicker__day {
+    @apply w-[14.28%] !important;
+  }
+}
+
+/* Плавные переходы */
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+/* Анимация золотого свечения */
+@keyframes goldGlow {
+  0% {
+    box-shadow: 0 0 5px #C5A47E;
+  }
+  50% {
+    box-shadow: 0 0 20px #C5A47E;
+  }
+  100% {
+    box-shadow: 0 0 5px #C5A47E;
+  }
+}
+
+.gold-glow {
+  animation: goldGlow 2s infinite;
+}
+
+/* Стили для интерактивной книги */
+.book-container {
+  perspective: 2000px;
+  transform-style: preserve-3d;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  will-change: transform;
+  overflow: hidden;
+}
+
+.book {
+  position: relative;
+  width: 98vw;
+  max-width: 1800px;
+  height: 90vh;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  cursor: grab;
+  will-change: transform, opacity;
+  transform: translateZ(0);
+}
+
+.book:active {
+  cursor: grabbing;
+}
+
+.book-page {
+  position: relative;
+  width: calc(50% - 1px);
+  height: 100%;
+  background: linear-gradient(to right, #f1e6d6, #fff);
+  overflow: hidden;
+  will-change: transform, opacity;
+  transform-origin: center;
+  padding: 2rem 2.5rem;
+  transform: translateZ(0);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: inset -20px 0 50px rgba(0, 0, 0, 0.1);
+}
+
+.left-page {
+  transform-origin: right center;
+  border-radius: 10px 0 0 10px;
+  margin-right: 0;
+  box-shadow: inset -20px 0 50px rgba(0, 0, 0, 0.1);
+}
+
+.right-page {
+  transform-origin: left center;
+  border-radius: 0 10px 10px 0;
+  margin-left: 0;
+  box-shadow: inset 20px 0 50px rgba(0, 0, 0, 0.1);
+}
+
+.flipping-page {
+  position: absolute;
+  width: calc(50% - 1px);
+  height: 100%;
+  transform-style: preserve-3d;
+  z-index: 1;
+  pointer-events: none;
+  will-change: transform;
+  backface-visibility: hidden;
+  transform-origin: left center;
+  transform: translateZ(0);
+  transition: transform 0.6s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+}
+
+.flip-right {
+  left: 50%;
+  margin-left: 0;
+  transform-origin: left center;
+}
+
+.flip-left {
+  left: 0;
+  margin-right: 0;
+  transform-origin: right center;
+}
+
+.page-front,
+.page-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  overflow: hidden;
+  background: linear-gradient(to right, #f1e6d6, #fff);
+  padding: 2.5rem;
+  color: #5A0B0D;
+  will-change: transform;
+  transform-style: preserve-3d;
+  transform: translateZ(0);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.page-back {
+  transform: rotateY(180deg) translateZ(1px);
+}
+
+/* Тень при перелистывании */
+.flipping-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.2),
+    transparent 30%,
+    transparent 70%,
+    rgba(0, 0, 0, 0.2)
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.flip-right::before {
+  left: 0;
+  transform-origin: left center;
+}
+
+.flip-left::before {
+  right: 0;
+  transform-origin: right center;
+}
+
+.flipping-page.animate::before {
+  opacity: 1;
+}
+
+/* Эффект корешка книги */
+.book::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to right, 
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.05) 50%,
+    rgba(0, 0, 0, 0.1)
+  );
+  transform: translateX(-50%);
+  z-index: 2;
+  border-radius: 2px;
+  will-change: opacity;
+}
+
+/* Стили для масонри-галереи */
+.masonry-grid {
+  column-count: 3;
+  column-gap: 1.5rem;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .masonry-grid {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 640px) {
+  .masonry-grid {
+    column-count: 1;
+  }
+}
+
+.masonry-item {
+  break-inside: avoid;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
+  will-change: transform;
+  position: relative;
+  overflow: hidden;
+}
+
+.masonry-item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  will-change: transform;
+  transition: transform 0.3s ease;
+}
+
+.masonry-item:hover img {
+  transform: scale(1.05);
+}
+
+.masonry-item .content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  color: white;
+  z-index: 2;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+  background: linear-gradient(to top, rgba(90, 11, 13, 0.9), rgba(90, 11, 13, 0));
+  border-radius: 0 0 8px 8px;
+}
+
+.masonry-item:hover .content {
+  transform: translateY(0);
+}
+
+/* Стили для видео фона */
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.video-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to bottom, rgba(90, 11, 13, 0.8), rgba(26, 26, 26, 0.95));
+  z-index: -1;
+}
+
+.dish-card {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 1.25rem;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  padding: 1.5rem;
+  height: calc(50% - 1rem);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.dish-media {
+  width: 200px;
+  height: 200px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: rgba(90, 11, 13, 0.05);
+  flex-shrink: 0;
+}
+
+.dish-video,
+.dish-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dish-content {
+  display: grid;
+  grid-template-rows: auto auto auto minmax(0, 1fr);
+  gap: 0.75rem;
+  height: 100%;
+}
+
+.dish-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.dish-title {
+  font-family: var(--font-playfair);
+  font-size: 1.4rem;
+  color: #5A0B0D;
+  line-height: 1.2;
+  margin: 0;
+  flex: 1;
+}
+
+.dish-price {
+  font-family: var(--font-playfair);
+  font-size: 1.4rem;
+  color: #C5A47E;
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+.dish-description {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #333;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.dish-meta {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.dish-ingredients {
+  background: rgba(90, 11, 13, 0.05);
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+}
+
+.dish-ingredients h4 {
+  color: #5A0B0D;
+  margin: 0 0 0.25rem 0;
+  font-family: var(--font-playfair);
+  font-size: clamp(0.8rem, 1vw, 0.85rem);
+}
+
+.dish-ingredients ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.35rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+}
+
+.dish-ingredients li {
+  color: #333;
+  font-size: clamp(0.65rem, 0.7vw, 0.7rem);
+  line-height: 1.1;
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  min-width: 0;
+}
+
+.dish-ingredients li:before {
+  content: "•";
+  color: #C5A47E;
+  font-size: 0.75em;
+  flex-shrink: 0;
+}
+
+@media (max-width: 1600px) {
+  .dish-ingredients {
+    padding: 0.4rem 0.6rem;
+  }
+  
+  .dish-ingredients ul {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.25rem;
+  }
+}
+
+@media (max-width: 1400px) {
+  .dish-ingredients ul {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.2rem;
+  }
+  
+  .dish-ingredients li {
+    font-size: clamp(0.6rem, 0.65vw, 0.65rem);
+  }
+}
+
+.book-navigation {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 2rem;
+  z-index: 10;
+}
+
+.nav-button {
+  background: linear-gradient(to right, #5A0B0D, #C5A47E);
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.nav-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.nav-button:not(:disabled):hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(197, 164, 126, 0.3);
+}
+
+.page-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1.5rem;
+  transform: translateZ(0);
+  will-change: transform;
+  position: relative;
+  z-index: 2;
+  padding: 1rem 0;
+}
+
+@media (max-width: 1600px) {
+  .dish-card {
+    grid-template-columns: 180px 1fr;
+  }
+  
+  .dish-media {
+    width: 180px;
+    height: 180px;
+  }
+  
+  .dish-ingredients li {
+    min-width: 100%;
+  }
+  
+  .dish-ingredients ul {
+    gap: 0.25rem;
+  }
+}
+
+@media (max-width: 1400px) {
+  .dish-card {
+    grid-template-columns: 160px 1fr;
+    padding: 1.25rem;
+  }
+  
+  .dish-media {
+    width: 160px;
+    height: 160px;
+  }
+  
+  .dish-title {
+    font-size: 1.2rem;
+  }
+  
+  .dish-price {
+    font-size: 1.2rem;
+  }
+  
+  .dish-description {
+    font-size: 0.9rem;
+    -webkit-line-clamp: 2;
+  }
+  
+  .dish-ingredients h4 {
+    font-size: 0.9rem;
+  }
+  
+  .dish-ingredients ul {
+    font-size: 0.8rem;
+  }
 }

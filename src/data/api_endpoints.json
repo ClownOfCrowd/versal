@@ -1,0 +1,212 @@
+{
+  "api": {
+    "base_url": "https://api.versal-restaurant.ru/v1",
+    "authentication": {
+      "type": "JWT",
+      "endpoints": {
+        "login": "/auth/login",
+        "refresh": "/auth/refresh",
+        "logout": "/auth/logout"
+      },
+      "roles": [
+        "guest",
+        "user",
+        "moderator",
+        "admin"
+      ]
+    },
+    "endpoints": {
+      "blog": {
+        "posts": {
+          "get_all": {
+            "method": "GET",
+            "path": "/posts",
+            "parameters": {
+              "page": "number",
+              "limit": "number",
+              "category": "string",
+              "tag": "string",
+              "search": "string"
+            },
+            "response": {
+              "posts": "array",
+              "total": "number",
+              "page": "number"
+            }
+          },
+          "get_single": {
+            "method": "GET",
+            "path": "/posts/{id}",
+            "response": {
+              "post": "object",
+              "related": "array"
+            }
+          },
+          "create": {
+            "method": "POST",
+            "path": "/posts",
+            "auth_required": true,
+            "role_required": "admin"
+          },
+          "update": {
+            "method": "PUT",
+            "path": "/posts/{id}",
+            "auth_required": true,
+            "role_required": "admin"
+          },
+          "delete": {
+            "method": "DELETE",
+            "path": "/posts/{id}",
+            "auth_required": true,
+            "role_required": "admin"
+          }
+        },
+        "comments": {
+          "get": {
+            "method": "GET",
+            "path": "/posts/{id}/comments",
+            "parameters": {
+              "sort": "string",
+              "page": "number"
+            }
+          },
+          "create": {
+            "method": "POST",
+            "path": "/posts/{id}/comments",
+            "auth_required": true
+          },
+          "moderate": {
+            "method": "PUT",
+            "path": "/comments/{id}/status",
+            "auth_required": true,
+            "role_required": "moderator"
+          }
+        },
+        "ratings": {
+          "get": {
+            "method": "GET",
+            "path": "/posts/{id}/ratings"
+          },
+          "submit": {
+            "method": "POST",
+            "path": "/posts/{id}/ratings",
+            "auth_required": true
+          }
+        }
+      },
+      "interactive": {
+        "recipe_calculator": {
+          "convert": {
+            "method": "POST",
+            "path": "/calculator/convert",
+            "parameters": {
+              "recipe_id": "string",
+              "servings": "number",
+              "units": "string"
+            }
+          }
+        },
+        "wine_pairing": {
+          "suggest": {
+            "method": "GET",
+            "path": "/wine/pairing",
+            "parameters": {
+              "dish": "string",
+              "price_range": "string",
+              "preferences": "array"
+            }
+          }
+        },
+        "booking": {
+          "check_availability": {
+            "method": "GET",
+            "path": "/booking/availability",
+            "parameters": {
+              "date": "string",
+              "time": "string",
+              "guests": "number"
+            }
+          },
+          "create": {
+            "method": "POST",
+            "path": "/booking/reserve",
+            "auth_required": true
+          }
+        }
+      },
+      "user": {
+        "preferences": {
+          "get": {
+            "method": "GET",
+            "path": "/user/preferences",
+            "auth_required": true
+          },
+          "update": {
+            "method": "PUT",
+            "path": "/user/preferences",
+            "auth_required": true
+          }
+        },
+        "achievements": {
+          "get": {
+            "method": "GET",
+            "path": "/user/achievements",
+            "auth_required": true
+          },
+          "claim_reward": {
+            "method": "POST",
+            "path": "/user/achievements/{id}/claim",
+            "auth_required": true
+          }
+        }
+      },
+      "analytics": {
+        "content": {
+          "get_stats": {
+            "method": "GET",
+            "path": "/analytics/content",
+            "auth_required": true,
+            "role_required": "admin"
+          }
+        },
+        "user_engagement": {
+          "get_stats": {
+            "method": "GET",
+            "path": "/analytics/engagement",
+            "auth_required": true,
+            "role_required": "admin"
+          }
+        }
+      }
+    },
+    "webhooks": {
+      "post_published": "/webhooks/post_published",
+      "comment_received": "/webhooks/comment_received",
+      "booking_confirmed": "/webhooks/booking_confirmed"
+    },
+    "rate_limits": {
+      "public_api": {
+        "requests_per_minute": 60,
+        "burst": 100
+      },
+      "authenticated": {
+        "requests_per_minute": 120,
+        "burst": 200
+      }
+    },
+    "error_responses": {
+      "400": "Bad Request - Неверные параметры запроса",
+      "401": "Unauthorized - Требуется авторизация",
+      "403": "Forbidden - Недостаточно прав",
+      "404": "Not Found - Ресурс не найден",
+      "429": "Too Many Requests - Превышен лимит запросов",
+      "500": "Internal Server Error - Внутренняя ошибка сервера"
+    }
+  },
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2024-01-29",
+    "documentation_url": "https://docs.versal-restaurant.ru/api",
+    "support_email": "api@versal-restaurant.ru"
+  }
+} 
