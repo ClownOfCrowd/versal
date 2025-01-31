@@ -4,7 +4,16 @@ const nextConfig = {
   swcMinify: true,
   images: {
     unoptimized: true,
-    domains: ['localhost'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**',
+      },
+    ],
   },
-  output: 'standalone',
-} 
+  output: 'export',
+  distDir: 'out',
+  trailingSlash: true,
+}
+
+module.exports = nextConfig 
