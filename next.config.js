@@ -6,9 +6,8 @@ const nextConfig = {
     unoptimized: true,
   },
   output: 'export',
-  assetPrefix: '/',
-  basePath: '',
-  distDir: '.next',
+  trailingSlash: true,
+  distDir: 'out',
   webpack: (config) => {
     config.module.rules.push({
       test: /\.(mp4|webm|ogg|mp3|wav|flac|aac|jpg|jpeg|png|gif|svg)(\?.*)?$/,
