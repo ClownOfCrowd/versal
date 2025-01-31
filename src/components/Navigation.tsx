@@ -128,12 +128,10 @@ export default function Navigation() {
 
   return (
     <motion.header
-      className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled || isOpen
           ? 'bg-dark/80 backdrop-blur-lg py-4'
-          : isTransparentPage
-          ? 'bg-transparent py-6'
-          : 'bg-dark py-4'
+          : 'bg-transparent py-6'
       }`}
       initial={false}
     >

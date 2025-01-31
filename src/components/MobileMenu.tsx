@@ -76,7 +76,7 @@ const MobileMenu = memo(function MobileMenu({
               }
             }
           }}
-          className="fixed inset-x-0 top-0 h-screen bg-dark/95 backdrop-blur-lg md:hidden z-40"
+          className="fixed inset-x-0 top-0 h-screen bg-dark/95 backdrop-blur-xl md:hidden z-40"
         >
           <div className="container mx-auto px-4 pt-24 h-full">
             <div className="flex flex-col items-center justify-start space-y-8">
